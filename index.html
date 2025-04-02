@@ -30,7 +30,7 @@
         border-radius: 5px;
         background-color: #f9f9f9;
     }
-    #difficulty-container span, #feedback-container span {
+    #difficulty-container span, #feedback-container span, #verb-difficulty { /* Added verb-difficulty */
         font-weight: bold;
         color: #0056b3;
     }
@@ -62,6 +62,11 @@
     .options-container label:hover {
         background-color: #e9ecef;
     }
+    /* Style for selected radio button label */
+    .options-container input[type="radio"]:checked + span {
+       font-weight: bold;
+       /* Add other styles if desired */
+    }
     #feedback {
         margin-top: 15px;
         font-weight: bold;
@@ -83,6 +88,10 @@
         color: #555;
         font-size: 0.9em;
     }
+    /* Style for the verb difficulty display */
+    .verb-details p {
+        margin: 5px 0; /* Add some spacing between verb details */
+    }
 </style>
 </head>
 <body>
@@ -90,8 +99,7 @@
     <h1>Dutch Verb Practice</h1>
 
     <div id="difficulty-container">
-        Difficulty Level: <span id="current-difficulty">1</span><br>
-        Progress: <span id="level-progress">0</span> / <span id="level-threshold">5</span>
+        App Difficulty Level: <span id="current-difficulty">0</span><br> Progress: <span id="level-progress">0</span> / <span id="level-threshold">5</span>
     </div>
 
     <div id="tense-select-container">
@@ -104,9 +112,11 @@
     </div>
 
     <div id="question-container">
-        <p><strong>Verb:</strong> <span id="verb-infinitive"></span></p>
-        <p><strong>English Meaning:</strong> <span id="english-meaning"></span></p>
-        <p id="verb-info"></p> <label>Choose the correct form:</label>
+        <div class="verb-details">
+             <p><strong>Verb:</strong> <span id="verb-infinitive"></span></p>
+             <p><strong>English Meaning:</strong> <span id="english-meaning"></span></p>
+             <p><strong>Verb Difficulty:</strong> <span id="verb-difficulty"></span></p> <p id="verb-info"></p> </div>
+        <hr> <label>Choose the correct form:</label>
         <div class="options-container" id="options-container">
             </div>
     </div>
@@ -134,7 +144,7 @@
     const levelThreshold = 5; // Number of correct answers to advance level
     const maxDifficulty = 5; // Highest difficulty level in the JSON
 
-    // DOM Elements
+    // DOM Elements Cache
     const tenseSelect = document.getElementById("tense-select");
     const optionsContainer = document.getElementById("options-container");
     const feedbackEl = document.getElementById("feedback");
@@ -144,13 +154,14 @@
     const levelThresholdEl = document.getElementById("level-threshold");
     const verbInfinitiveEl = document.getElementById("verb-infinitive");
     const englishMeaningEl = document.getElementById("english-meaning");
+    const verbDifficultyEl = document.getElementById("verb-difficulty"); // Added cache for verb difficulty
     const verbInfoEl = document.getElementById("verb-info");
     const messageArea = document.getElementById("message-area");
     const questionContainer = document.getElementById("question-container");
 
 
     /**
-     * Loads the verb library from the JSON file.
+     * Loads the verb library from the JSON file using fetch.
      */
     async function loadVerbLibrary() {
         messageArea.textContent = "Loading verb library...";
@@ -161,156 +172,147 @@
             }
             verbLibrary = await response.json();
             console.log(`Successfully loaded ${verbLibrary.length} verbs.`);
-            messageArea.textContent = ""; // Clear loading message
-            initializeApp(); // Start the app only after data is loaded
+            messageArea.textContent = "";
+            initializeApp();
         } catch (error) {
             console.error('Could not load verb library:', error);
-            messageArea.textContent = `Error loading verb library: ${error.message}. Please ensure dutchverbslibrary.json is in the same directory.`;
-            // Disable UI elements if loading fails
+            messageArea.textContent = `Error loading verb library: ${error.message}. Please ensure dutchverbslibrary.json is in the same directory and is valid JSON.`;
             tenseSelect.disabled = true;
+            questionContainer.innerHTML = "<p>Could not load questions.</p>";
         }
     }
 
     /**
      * Initializes the application state and loads the first question.
-     * Called after the verb library is successfully loaded.
      */
     function initializeApp() {
         levelThresholdEl.textContent = levelThreshold;
         currentDifficultyEl.textContent = currentDifficulty;
         levelProgressEl.textContent = correctInLevel;
         overallScoreEl.textContent = overallScore;
-        tenseSelect.disabled = false; // Ensure select is enabled
-        loadQuestion(); // Load the first question
+        tenseSelect.disabled = false;
+        loadQuestion();
     }
 
     /**
      * Loads a new verb question based on current difficulty and selected tense.
      */
     function loadQuestion() {
-        // Filter verbs for the current difficulty level
-        let filteredVerbs = verbLibrary.filter(verb => verb.difficulty_level === currentDifficulty);
-
-        // If no verbs at current level (or level completed), try to advance
-        if (filteredVerbs.length === 0) {
-            if (currentDifficulty < maxDifficulty) {
-                currentDifficulty++;
-                currentDifficultyEl.textContent = currentDifficulty;
-                correctInLevel = 0; // Reset progress for new level
-                levelProgressEl.textContent = correctInLevel;
-                console.log(`Advanced to difficulty level ${currentDifficulty}`);
-                // Re-filter for the new level
-                filteredVerbs = verbLibrary.filter(verb => verb.difficulty_level === currentDifficulty);
-                 // Check if there are verbs at the new level
-                if (filteredVerbs.length === 0) {
-                    console.warn(`No verbs found for difficulty level ${currentDifficulty} either.`);
-                     // Handle case where even the next level has no verbs (maybe end of data)
-                    if (currentDifficulty >= maxDifficulty) {
-                        displayCompletionMessage();
-                        return;
-                    }
-                    // Potentially skip this level if empty, or display an error/message
-                    // For now, let's assume levels have verbs or we hit maxDifficulty
-                }
-            } else {
-                // Already at max difficulty and no verbs found (shouldn't happen if maxDifficulty is correct)
-                // Or, user completed the max difficulty level in the previous step
-                displayCompletionMessage();
-                return;
-            }
+        if (currentDifficulty > maxDifficulty) {
+            displayCompletionMessage();
+            return;
         }
 
-         // If after advancing we still have no verbs (e.g., skipped an empty level and next is also empty/max)
+        currentDifficultyEl.textContent = currentDifficulty;
+        levelProgressEl.textContent = correctInLevel;
+
+        let filteredVerbs = verbLibrary.filter(verb => verb.difficulty_level === currentDifficulty);
+
         if (filteredVerbs.length === 0) {
-             displayCompletionMessage(); // Or handle differently
+             console.warn(`No verbs found for difficulty level ${currentDifficulty}.`);
+             if (currentDifficulty >= maxDifficulty) {
+                 displayCompletionMessage();
+             } else {
+                 console.log("Attempting to advance level due to empty current level...");
+                 currentDifficulty++;
+                 correctInLevel = 0;
+                 messageArea.textContent = `No verbs found for level ${currentDifficulty-1}. Trying level ${currentDifficulty}.`;
+                 loadQuestion();
+             }
              return;
         }
 
-
-        // Select a random verb from the filtered list
         currentVerb = filteredVerbs[Math.floor(Math.random() * filteredVerbs.length)];
-        currentTenseField = tenseSelect.value; // e.g., 'present_singular_3rd'
+        currentTenseField = tenseSelect.value;
+        correctOptionValue = currentVerb[currentTenseField] || `N/A (${currentTenseField})`;
 
-        // Get the correct answer string from the current verb object
-        correctOptionValue = currentVerb[currentTenseField];
+        // --- Display Verb Info ---
+        verbInfinitiveEl.textContent = currentVerb.infinitive || 'N/A';
+        englishMeaningEl.textContent = currentVerb.translation || 'N/A';
+        verbDifficultyEl.textContent = currentVerb.difficulty_level !== undefined ? currentVerb.difficulty_level : 'N/A'; // Display verb's difficulty
 
-        // Display verb info
-        verbInfinitiveEl.textContent = currentVerb.infinitive;
-        englishMeaningEl.textContent = currentVerb.translation;
-
-        // Display auxiliary verb info if practicing past participle
         if (currentTenseField === 'past_participle') {
             verbInfoEl.textContent = `(Auxiliary: ${currentVerb.auxiliary_verb || 'N/A'})`;
         } else {
-            verbInfoEl.textContent = ''; // Clear info for other tenses
+            verbInfoEl.textContent = '';
         }
+        // --- End Display Verb Info ---
 
 
-        // Generate options (1 correct, 4 incorrect)
-        const options = [correctOptionValue];
+        // --- Option Generation ---
+        const options = new Set();
+        if (correctOptionValue) {
+            options.add(correctOptionValue);
+        }
         const numOptions = 5;
+        let attempts = 0;
+        const maxAttempts = filteredVerbs.length * 2 + 10;
 
-        // Get distractors (same form, different verbs from the *same difficulty level*)
-        let attempts = 0; // Prevent infinite loop
-        while (options.length < numOptions && attempts < 20) {
+        while (options.size < numOptions && attempts < maxAttempts) {
             const randomVerbIndex = Math.floor(Math.random() * filteredVerbs.length);
             const randomVerb = filteredVerbs[randomVerbIndex];
-            // Ensure we don't pick the same verb again for distractors if possible
-            if (randomVerb.verb_id === currentVerb.verb_id && filteredVerbs.length > 1) {
-                attempts++;
-                continue;
-            }
             const randomOption = randomVerb[currentTenseField];
 
-            // Add if it's a valid option and not already included
-            if (randomOption && !options.includes(randomOption)) {
-                options.push(randomOption);
+            if (randomOption && !options.has(randomOption)) {
+                options.add(randomOption);
             }
             attempts++;
         }
 
-        // If we still don't have enough options (e.g., few verbs at this level), fill with placeholders or duplicates if necessary
-         while (options.length < numOptions) {
-             options.push(`Option ${options.length + 1}`); // Placeholder
-             console.warn("Could not generate enough unique distractors.");
-         }
+        const optionsArray = Array.from(options);
+        shuffleArray(optionsArray);
+
+        while (optionsArray.length < numOptions) {
+            optionsArray.push(`Option ${optionsArray.length + 1}`);
+            console.warn("Could not generate enough unique distractors, adding placeholder.");
+        }
+        if (!optionsArray.includes(correctOptionValue) && correctOptionValue) {
+             optionsArray[Math.floor(Math.random() * numOptions)] = correctOptionValue;
+        }
+        // --- End Option Generation ---
 
 
-        shuffleArray(options);
-
-        // Display options as radio buttons
-        optionsContainer.innerHTML = ""; // Clear previous options
-        options.forEach((option) => {
+        // --- Display Options ---
+        optionsContainer.innerHTML = "";
+        optionsArray.forEach((option) => {
             const label = document.createElement("label");
             const radio = document.createElement("input");
+            const span = document.createElement("span");
+
             radio.type = "radio";
             radio.name = "verb-option";
             radio.value = option;
-            radio.addEventListener("change", handleAnswerSelection); // Changed event listener
+            // Ensure unique ID even if option is 'N/A' or similar
+            const safeOptionId = String(option).replace(/[^a-zA-Z0-9-_]/g, '') || `opt-${Math.random().toString(36).substr(2, 9)}`;
+            radio.id = `option-${safeOptionId}`;
+            radio.addEventListener("change", handleAnswerSelection);
+
+            span.textContent = ` ${option || 'N/A'}`;
+
+            label.htmlFor = radio.id;
             label.appendChild(radio);
-            label.appendChild(document.createTextNode(option || 'N/A')); // Handle null/undefined options gracefully
+            label.appendChild(span);
             optionsContainer.appendChild(label);
         });
+        // --- End Display Options ---
 
-        // Clear previous feedback
         feedbackEl.textContent = "";
-        feedbackEl.className = ""; // Remove color classes
+        feedbackEl.className = "";
     }
 
     /**
-     * Shuffles array elements in place.
+     * Shuffles array elements in place using Fisher-Yates algorithm.
      * @param {Array} array Array to shuffle.
      */
     function shuffleArray(array) {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array[j], array[i]]; // ES6 swap
+            [array[i], array[j]] = [array[j], array[i]];
         }
     }
 
     /**
       * Handles the selection of an answer and triggers checking.
-      * Added this intermediate step for clarity and potential future use (e.g., submit button)
       */
     function handleAnswerSelection() {
         checkAnswer();
@@ -325,64 +327,61 @@
         if (selectedOption) {
             const userAnswer = selectedOption.value;
 
-            // Direct comparison with the stored correct option string
             if (userAnswer === correctOptionValue) {
                 feedbackEl.textContent = "Correct!";
-                feedbackEl.className = "correct"; // Add green background
+                feedbackEl.className = "correct";
                 overallScore++;
                 correctInLevel++;
                 overallScoreEl.textContent = overallScore;
                 levelProgressEl.textContent = correctInLevel;
 
-                // Check for level advancement
                 if (correctInLevel >= levelThreshold) {
                     if (currentDifficulty < maxDifficulty) {
-                        // currentDifficulty++; // Increment happens in loadQuestion now
-                        // currentDifficultyEl.textContent = currentDifficulty;
-                        // correctInLevel = 0; // Reset happens in loadQuestion now
-                        // levelProgressEl.textContent = correctInLevel;
+                        currentDifficulty++;
+                        correctInLevel = 0;
                         feedbackEl.textContent += " Level complete! Moving to the next difficulty level!";
-                        // Let loadQuestion handle the actual level increment and re-filtering
                     } else {
-                        // Completed the final level
                         displayCompletionMessage();
-                        return; // Stop further processing
+                        return;
                     }
                 }
             } else {
                 feedbackEl.textContent = `Incorrect. The correct answer is: ${correctOptionValue}`;
-                feedbackEl.className = "incorrect"; // Add red background
+                feedbackEl.className = "incorrect";
             }
 
-            // Disable options after answering
             document.querySelectorAll('input[name="verb-option"]').forEach(radio => radio.disabled = true);
 
-
-            // Automatically load the next question after a short delay
-            setTimeout(loadQuestion, 1500); // Increased delay to read feedback
+            if (currentDifficulty <= maxDifficulty) {
+                 setTimeout(loadQuestion, 1500);
+            }
         }
     }
 
     /**
-     * Displays the completion message.
+     * Displays the completion message when all levels are done.
      */
      function displayCompletionMessage() {
+         // Clear the specific question elements first
+         verbInfinitiveEl.textContent = "-";
+         englishMeaningEl.textContent = "-";
+         verbDifficultyEl.textContent = "-"; // Clear verb difficulty too
+         verbInfoEl.textContent = "";
+         optionsContainer.innerHTML = ""; // Clear options
+
+         // Then update the container with the message
          questionContainer.innerHTML = "<h2>Congratulations! You have completed all available difficulty levels.</h2>";
-         tenseSelect.disabled = true; // Disable further changes
+         tenseSelect.disabled = true;
          feedbackEl.textContent = "Finished!";
          feedbackEl.className = "correct";
      }
 
 
-    // Event Listeners
+    // --- Event Listeners ---
     tenseSelect.addEventListener("change", () => {
-        // Reset level progress if tense changes? Optional, maybe not desired.
-        // correctInLevel = 0;
-        // levelProgressEl.textContent = correctInLevel;
-        loadQuestion(); // Load a new question for the selected tense
+        loadQuestion();
     });
 
-    // Start loading the verb library when the DOM is ready
     document.addEventListener("DOMContentLoaded", loadVerbLibrary);
 
 </script>
