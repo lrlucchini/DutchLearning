@@ -3348,7 +3348,7 @@
     "infinitive": "zich verbazen (over)",
     "translation": "to be amazed (at/by)",
     "base_verb": "bazen", 
-    "prefix": "ver", // Inseparable prefix
+    "prefix": "ver", 
     "is_separable": false,
     "is_reflexive": true,
     "type": "weak",
