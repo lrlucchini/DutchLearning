@@ -2,24 +2,26 @@
 <html>
 <head>
 <title>Dutch Verb Flashcard Practice</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> <style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
     :root {
         --card-transition-duration: 0.6s;
     }
     body {
         font-family: sans-serif;
         line-height: 1.6;
-        background-color: #f0f2f5; /* Light grey background */
+        background-color: #f0f2f5;
         color: #333;
         padding: 15px;
         display: flex;
         flex-direction: column;
-        align-items: center; /* Center content */
+        align-items: center;
     }
     .main-container {
         max-width: 600px;
-        width: 95%; /* Responsive width */
+        width: 95%;
         margin: 10px auto;
+        position: relative; /* Added for flip button positioning */
     }
     h1 {
         color: #0056b3;
@@ -29,8 +31,8 @@
     /* --- Card Styles --- */
     .flashcard-scene {
         width: 100%;
-        height: 450px; /* Adjust height as needed */
-        perspective: 1000px; /* For 3D effect */
+        height: 600px; /* Increased height */
+        perspective: 1000px;
         margin-bottom: 20px;
     }
     .flashcard-container {
@@ -39,7 +41,7 @@
         position: relative;
         transition: transform var(--card-transition-duration);
         transform-style: preserve-3d;
-        border-radius: 15px; /* Rounded corners for card */
+        border-radius: 15px;
         box-shadow: 0 4px 15px rgba(0,0,0,0.15);
     }
     .flashcard-container.is-flipped {
@@ -49,23 +51,23 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        -webkit-backface-visibility: hidden; /* Safari */
+        -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         background-color: #fff;
         border-radius: 15px;
         padding: 25px;
         box-sizing: border-box;
-        overflow-y: auto; /* Allow scrolling if content overflows */
+        overflow-y: auto;
         border: 1px solid #ddd;
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Stack elements vertically */
     }
     .card-front {
-        /* Front face styles */
-        z-index: 2; /* Ensure front is initially visible */
+        z-index: 2;
     }
     .card-back {
-        /* Back face styles */
         transform: rotateY(180deg);
-        background-color: #e9f5ff; /* Slightly different background for back */
+        background-color: #e9f5ff;
         z-index: 1;
     }
     .card-back h3 {
@@ -73,21 +75,30 @@
         color: #0056b3;
         border-bottom: 1px solid #ccc;
         padding-bottom: 5px;
+        text-align: center;
     }
-    .card-back p {
-        margin: 8px 0;
+    /* Grid layout for back card details */
+    .card-back-details {
+        display: grid;
+        grid-template-columns: auto 1fr; /* Label column auto, value column takes rest */
+        gap: 6px 12px; /* Row gap, Column gap */
         font-size: 0.95em;
+        margin-bottom: 15px;
     }
-    .card-back strong {
+    .card-back-details strong {
         color: #333;
-        min-width: 150px; /* Align keys */
-        display: inline-block;
+        grid-column: 1 / 2; /* Place label in first column */
+        text-align: right; /* Align label text right */
+    }
+    .card-back-details span {
+        grid-column: 2 / 3; /* Place value in second column */
+        word-break: break-word; /* Prevent long words overflowing */
     }
     /* --- End Card Styles --- */
 
     /* --- Other UI Elements --- */
      #difficulty-container, #feedback-container {
-        width: 100%; /* Match card width */
+        width: 100%;
         max-width: 600px;
         margin-bottom: 15px;
         padding: 15px;
@@ -101,21 +112,24 @@
         font-weight: bold;
         color: #0056b3;
     }
-    label {
+    /* Ensure labels inside card front take space */
+    #card-front label {
         display: block;
         margin-bottom: 8px;
         font-weight: bold;
     }
-    select, input[type="radio"] {
-        margin-right: 5px;
-    }
-    select {
+    #card-front select {
         padding: 8px;
         border-radius: 4px;
         border: 1px solid #ccc;
         width: 100%;
         box-sizing: border-box;
-        margin-bottom: 15px; /* Space below select */
+        margin-bottom: 15px;
+    }
+    .options-container {
+        flex-grow: 1; /* Allow options to take remaining space */
+        overflow-y: auto; /* Scroll options if needed, less likely now */
+        margin-top: 10px;
     }
     .options-container label {
         display: block;
@@ -129,6 +143,9 @@
     }
     .options-container label:hover {
         background-color: #e9ecef;
+    }
+    .options-container input[type="radio"] {
+        margin-right: 8px;
     }
     .options-container input[type="radio"]:checked + span {
        font-weight: bold;
@@ -159,21 +176,47 @@
         margin: 5px 0;
     }
     #flip-button {
-        position: absolute; /* Position relative to main-container */
-        top: 10px;
-        right: 10px;
+        position: absolute;
+        top: 5px; /* Adjusted position */
+        right: 5px;
         padding: 8px 12px;
-        background-color: #007bff;
+        background-color: #6c757d; /* Grey color */
         color: white;
         border: none;
         border-radius: 5px;
         cursor: pointer;
         font-size: 0.9em;
-        z-index: 10; /* Ensure button is clickable */
+        z-index: 10;
          transition: background-color 0.2s ease;
     }
      #flip-button:hover {
-         background-color: #0056b3;
+         background-color: #5a6268;
+     }
+     #flip-button:disabled {
+         background-color: #adb5bd;
+         cursor: not-allowed;
+     }
+     #next-button { /* Style for the new Next button */
+        display: block; /* Make it block level */
+        width: 100%; /* Match container width */
+        max-width: 600px; /* Consistent max width */
+        padding: 12px 20px;
+        margin: 10px auto 20px auto; /* Center below feedback */
+        font-size: 1.1em;
+        font-weight: bold;
+        color: white;
+        background-color: #28a745; /* Green color */
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+     }
+     #next-button:hover {
+         background-color: #218838;
+     }
+     #next-button:disabled {
+         background-color: #adb5bd;
+         cursor: not-allowed;
      }
      hr {
          border: none;
@@ -183,8 +226,11 @@
 </style>
 </head>
 <body>
-<div class="main-container"> <h1>Dutch Verb Flashcard Practice</h1>
-    <button id="flip-button">Flip / Skip</button> <div id="difficulty-container">
+<div class="main-container">
+    <h1>Dutch Verb Flashcard Practice</h1>
+    <button id="flip-button">Flip / Skip</button>
+
+    <div id="difficulty-container">
         App Difficulty Level: <span id="current-difficulty">0</span><br>
         Progress: <span id="level-progress">0</span> / <span id="level-threshold">5</span>
     </div>
@@ -216,22 +262,28 @@
             </div>
             <div class="card-face card-back" id="card-back">
                 <h3>Verb Details</h3>
-                <p><strong>Infinitive:</strong> <span id="back-infinitive"></span></p>
-                <p><strong>Translation:</strong> <span id="back-translation"></span></p>
-                <p><strong>Difficulty:</strong> <span id="back-difficulty"></span></p>
-                <p><strong>Type:</strong> <span id="back-type"></span></p>
-                <p><strong>Separable:</strong> <span id="back-separable"></span></p>
-                <p><strong>Reflexive:</strong> <span id="back-reflexive"></span></p>
-                <p><strong>Auxiliary:</strong> <span id="back-auxiliary"></span></p>
-                <hr>
-                <p><strong>Present (hij):</strong> <span id="back-present"></span></p>
-                <p><strong>Past Simple (ik):</strong> <span id="back-past-sg"></span></p>
-                <p><strong>Past Simple (wij):</strong> <span id="back-past-pl"></span></p>
-                <p><strong>Past Participle:</strong> <span id="back-participle"></span></p>
-                <hr>
-                <p><strong>Example (Present):</strong> <span id="back-example-present"></span></p>
-                <p><strong>Example (Perfect):</strong> <span id="back-example-perfect"></span></p>
+                <div class="card-back-details">
+                    <strong>Infinitive:</strong> <span id="back-infinitive"></span>
+                    <strong>Translation:</strong> <span id="back-translation"></span>
+                    <strong>Difficulty:</strong> <span id="back-difficulty"></span>
+                    <strong>Type:</strong> <span id="back-type"></span>
+                    <strong>Separable:</strong> <span id="back-separable"></span>
+                    <strong>Reflexive:</strong> <span id="back-reflexive"></span>
+                    <strong>Auxiliary:</strong> <span id="back-auxiliary"></span>
                 </div>
+                <hr>
+                 <div class="card-back-details">
+                    <strong>Present (hij):</strong> <span id="back-present"></span>
+                    <strong>Past Simple (ik):</strong> <span id="back-past-sg"></span>
+                    <strong>Past Simple (wij):</strong> <span id="back-past-pl"></span>
+                    <strong>Past Participle:</strong> <span id="back-participle"></span>
+                 </div>
+                <hr>
+                 <div class="card-back-details">
+                    <strong>Example (Present):</strong> <span id="back-example-present"></span>
+                    <strong>Example (Perfect):</strong> <span id="back-example-perfect"></span>
+                 </div>
+            </div>
         </div>
     </div>
 
@@ -239,6 +291,8 @@
         <p id="feedback"></p>
         <p>Overall Score: <span id="overall-score">0</span></p>
     </div>
+
+    <button id="next-button" disabled>Next Question</button>
 
     <div id="message-area" style="text-align: center; padding: 10px; color: red;"></div>
 
@@ -250,7 +304,7 @@
     let currentVerb;
     let currentTenseField;
     let correctOptionValue;
-    let isCardFlipped = false; // State for card flip
+    let isCardFlipped = false;
 
     // Score and difficulty tracking
     let overallScore = 0;
@@ -272,9 +326,9 @@
     const verbDifficultyEl = document.getElementById("verb-difficulty");
     const verbInfoEl = document.getElementById("verb-info");
     const messageArea = document.getElementById("message-area");
-    const questionContainer = document.getElementById("question-container"); // Keep for completion message target
     const flashcardContainer = document.getElementById("flashcard-container");
     const flipButton = document.getElementById("flip-button");
+    const nextButton = document.getElementById("next-button"); // Cache next button
     const cardFront = document.getElementById("card-front");
     const cardBack = document.getElementById("card-back");
 
@@ -313,7 +367,7 @@
             messageArea.textContent = `Error loading verb library: ${error.message}. Please ensure dutchverbslibrary.json is in the same directory and is valid JSON.`;
             tenseSelect.disabled = true;
             flipButton.disabled = true;
-             // Display error within the card area as well
+            nextButton.disabled = true;
              cardFront.innerHTML = "<p style='color:red;'>Could not load questions.</p>";
              cardBack.innerHTML = "<p style='color:red;'>Could not load details.</p>";
         }
@@ -329,11 +383,12 @@
         overallScoreEl.textContent = overallScore;
         tenseSelect.disabled = false;
         flipButton.disabled = false;
+        nextButton.disabled = true; // Start with Next button disabled
         loadQuestion();
     }
 
     /**
-     * Loads a new verb question, populates front and back of card, resets flip state.
+     * Loads a new verb question, populates front and back of card, resets flip state and buttons.
      */
     function loadQuestion() {
         // Reset card flip state visually and logically
@@ -341,7 +396,10 @@
             flashcardContainer.classList.remove('is-flipped');
             isCardFlipped = false;
         }
-        flipButton.disabled = false; // Re-enable flip button
+        // Reset button states for new question
+        flipButton.disabled = false;
+        nextButton.disabled = true;
+
 
         if (currentDifficulty > maxDifficulty) {
             displayCompletionMessage();
@@ -362,7 +420,7 @@
                  currentDifficulty++;
                  correctInLevel = 0;
                  messageArea.textContent = `No verbs found for level ${currentDifficulty-1}. Trying level ${currentDifficulty}.`;
-                 loadQuestion(); // Recursive call - careful! Could limit recursion depth if needed.
+                 loadQuestion();
              }
              return;
         }
@@ -383,19 +441,20 @@
         }
 
         // --- Populate Card Back ---
-        backInfinitive.textContent = currentVerb.infinitive || 'N/A';
-        backTranslation.textContent = currentVerb.translation || 'N/A';
-        backDifficulty.textContent = currentVerb.difficulty_level !== undefined ? currentVerb.difficulty_level : 'N/A';
-        backType.textContent = currentVerb.type || 'N/A';
-        backSeparable.textContent = currentVerb.is_separable !== undefined ? currentVerb.is_separable : 'N/A';
-        backReflexive.textContent = currentVerb.is_reflexive !== undefined ? currentVerb.is_reflexive : 'N/A';
-        backAuxiliary.textContent = currentVerb.auxiliary_verb || 'N/A';
-        backPresent.textContent = currentVerb.present_singular_3rd || 'N/A';
-        backPastSg.textContent = currentVerb.simple_past_singular || 'N/A';
-        backPastPl.textContent = currentVerb.simple_past_plural || 'N/A';
-        backParticiple.textContent = currentVerb.past_participle || 'N/A';
-        backExamplePresent.textContent = currentVerb.example_present || 'N/A';
-        backExamplePerfect.textContent = currentVerb.example_perfect || 'N/A';
+        // Use helper function for cleaner population
+        populateBackValue(backInfinitive, currentVerb.infinitive);
+        populateBackValue(backTranslation, currentVerb.translation);
+        populateBackValue(backDifficulty, currentVerb.difficulty_level);
+        populateBackValue(backType, currentVerb.type);
+        populateBackValue(backSeparable, currentVerb.is_separable);
+        populateBackValue(backReflexive, currentVerb.is_reflexive);
+        populateBackValue(backAuxiliary, currentVerb.auxiliary_verb);
+        populateBackValue(backPresent, currentVerb.present_singular_3rd);
+        populateBackValue(backPastSg, currentVerb.simple_past_singular);
+        populateBackValue(backPastPl, currentVerb.simple_past_plural);
+        populateBackValue(backParticiple, currentVerb.past_participle);
+        populateBackValue(backExamplePresent, currentVerb.example_present);
+        populateBackValue(backExamplePerfect, currentVerb.example_perfect);
 
 
         // --- Option Generation (Front) ---
@@ -439,6 +498,7 @@
             radio.type = "radio";
             radio.name = "verb-option";
             radio.value = option;
+            radio.disabled = false; // Ensure options are enabled for new question
             const safeOptionId = String(option).replace(/[^a-zA-Z0-9-_]/g, '') || `opt-${Math.random().toString(36).substr(2, 9)}`;
             radio.id = `option-${safeOptionId}`;
             radio.addEventListener("change", handleAnswerSelection);
@@ -455,6 +515,16 @@
         feedbackEl.textContent = "";
         feedbackEl.className = "";
     }
+
+    /**
+     * Helper to populate back card elements, handling undefined/null.
+     */
+    function populateBackValue(element, value) {
+        if (element) {
+            element.textContent = (value !== undefined && value !== null) ? String(value) : 'N/A';
+        }
+    }
+
 
     /**
      * Shuffles array elements in place.
@@ -478,13 +548,13 @@
 
 
     /**
-     * Checks the selected answer against the correct option.
+     * Checks the selected answer against the correct option. Enables Next button.
      */
     function checkAnswer() {
         const selectedOption = document.querySelector('input[name="verb-option"]:checked');
         if (selectedOption) {
             const userAnswer = selectedOption.value;
-            let proceedToNext = true; // Flag to control moving to next question
+            let proceedToNext = true;
 
             if (userAnswer === correctOptionValue) {
                 feedbackEl.textContent = "Correct!";
@@ -501,7 +571,7 @@
                         feedbackEl.textContent += " Level complete! Moving to the next difficulty level!";
                     } else {
                         displayCompletionMessage();
-                        proceedToNext = false; // Don't load next question if complete
+                        proceedToNext = false;
                     }
                 }
             } else {
@@ -509,18 +579,18 @@
                 feedbackEl.className = "incorrect";
             }
 
-            // Load next question only if game is not complete
+            // Enable the Next button regardless of correct/incorrect, unless game ended
             if (proceedToNext) {
-                 setTimeout(loadQuestion, 1500); // Load next after showing feedback
+                 nextButton.disabled = false;
             }
         }
     }
 
      /**
-      * Handles the flip button click.
+      * Handles the flip button click. Shows back, enables Next button.
       */
      function handleFlip() {
-         const wasFlipped = isCardFlipped; // Check state *before* toggling
+         const wasFlipped = isCardFlipped;
          isCardFlipped = !isCardFlipped;
          flashcardContainer.classList.toggle('is-flipped');
 
@@ -534,13 +604,15 @@
              document.querySelectorAll('input[name="verb-option"]').forEach(radio => radio.disabled = true);
              flipButton.disabled = true;
 
-             // Load the next question after a delay so user can see the back
-             if (currentDifficulty <= maxDifficulty) { // Prevent loading if game already ended
-                 setTimeout(loadQuestion, 2000); // Longer delay to see the card back
+             // Enable the Next button
+             if (currentDifficulty <= maxDifficulty) { // Prevent enabling if game already ended
+                 nextButton.disabled = false;
              }
          } else {
-             // Flipping back to front - do nothing else
+             // Flipping back to front - re-enable flip button? Or keep disabled until next?
+             // Let's keep it disabled if flipped back, user should use Next now.
              console.log("Flipped back to front");
+             // flipButton.disabled = false; // Optional: re-enable flip if flipped back
          }
      }
 
@@ -549,9 +621,10 @@
      * Displays the completion message when all levels are done.
      */
      function displayCompletionMessage() {
-         flashcardContainer.innerHTML = "<div class='card-face card-front' style='display:flex; align-items:center; justify-content:center; text-align:center;'><h2>Congratulations! You have completed all available difficulty levels.</h2></div>"; // Show message inside card
+         flashcardContainer.innerHTML = "<div class='card-face card-front' style='display:flex; align-items:center; justify-content:center; text-align:center;'><h2>Congratulations! You have completed all available difficulty levels.</h2></div>";
          tenseSelect.disabled = true;
          flipButton.disabled = true;
+         nextButton.disabled = true; // Disable next on completion too
          feedbackEl.textContent = "Finished!";
          feedbackEl.className = "correct";
      }
@@ -559,13 +632,21 @@
 
     // --- Event Listeners ---
     tenseSelect.addEventListener("change", () => {
-        // Only load if library is loaded and game not complete
         if (verbLibrary.length > 0 && currentDifficulty <= maxDifficulty) {
             loadQuestion();
         }
     });
 
     flipButton.addEventListener("click", handleFlip);
+
+    // Listener for the Next button
+    nextButton.addEventListener("click", () => {
+        if (currentDifficulty <= maxDifficulty) {
+             nextButton.disabled = true; // Disable immediately after click
+             loadQuestion();
+        }
+    });
+
 
     document.addEventListener("DOMContentLoaded", loadVerbLibrary);
 
