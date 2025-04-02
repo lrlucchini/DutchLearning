@@ -3110,7 +3110,7 @@
     "simple_past_singular": "resulteerde",
     "simple_past_plural": "resulteerden",
     "past_participle": "geresulteerd",
-    "auxiliary_verb": "hebben", // Often used with 'zijn' impersonally: 'het is geresulteerd in'
+    "auxiliary_verb": "hebben", 
     "example_present": "Dit resulteert in een betere samenwerking.",
     "example_perfect": "De onderhandelingen hebben geresulteerd in een akkoord.",
     "difficulty_level": 5
@@ -3142,7 +3142,7 @@
     "prefix": "toe",
     "is_separable": true,
     "is_reflexive": false,
-    "type": "weak", // like 'lichten'
+    "type": "weak", 
     "present_stem": "licht toe",
     "present_singular_3rd": "licht toe",
     "simple_past_singular": "lichtte toe",
@@ -3158,15 +3158,15 @@
     "infinitive": "veronderstellen",
     "translation": "to suppose / to assume",
     "base_verb": "stellen",
-    "prefix": "veronder", // Compound inseparable prefix
+    "prefix": "veronder", 
     "is_separable": false,
     "is_reflexive": false,
-    "type": "weak", // like 'stellen'
+    "type": "weak", 
     "present_stem": "veronderstel",
     "present_singular_3rd": "veronderstelt",
     "simple_past_singular": "veronderstelde",
     "simple_past_plural": "veronderstelden",
-    "past_participle": "verondersteld", // No extra 'ge-'
+    "past_participle": "verondersteld", 
     "auxiliary_verb": "hebben",
     "example_present": "Ik veronderstel dat u gelijk heeft.",
     "example_perfect": "We hebben verondersteld dat het zou werken.",
@@ -3177,15 +3177,15 @@
     "infinitive": "verschaffen",
     "translation": "to provide / to supply",
     "base_verb": "schaffen",
-    "prefix": "ver", // Inseparable prefix
+    "prefix": "ver", 
     "is_separable": false,
     "is_reflexive": false,
-    "type": "weak", // like 'schaffen' (schafte)
+    "type": "weak",
     "present_stem": "verschaf",
     "present_singular_3rd": "verschaft",
     "simple_past_singular": "verschafte",
     "simple_past_plural": "verschaften",
-    "past_participle": "verschaft", // No extra 'ge-'
+    "past_participle": "verschaft", 
     "auxiliary_verb": "hebben",
     "example_present": "De overheid verschaft informatie.",
     "example_perfect": "Hij heeft ons onderdak verschaft.",
@@ -3215,15 +3215,15 @@
     "infinitive": "volstaan",
     "translation": "to suffice / to be sufficient",
     "base_verb": "staan",
-    "prefix": "vol", // Inseparable prefix
+    "prefix": "vol",
     "is_separable": false,
     "is_reflexive": false,
-    "type": "strong / irregular", // like 'staan'
+    "type": "strong / irregular", 
     "present_stem": "volsta",
     "present_singular_3rd": "volstaat",
     "simple_past_singular": "volstond",
     "simple_past_plural": "volstonden",
-    "past_participle": "volstaan", // No extra 'ge-'
+    "past_participle": "volstaan", 
     "auxiliary_verb": "hebben",
     "example_present": "Een korte uitleg volstaat.",
     "example_perfect": "Een korte uitleg heeft volstaan.",
@@ -3234,15 +3234,15 @@
     "infinitive": "zich begeven",
     "translation": "to proceed / to go (formal)",
     "base_verb": "geven",
-    "prefix": "be", // Inseparable prefix
+    "prefix": "be", 
     "is_separable": false,
     "is_reflexive": true,
-    "type": "strong", // like 'geven' (gaf)
+    "type": "strong", 
     "present_stem": "begeef",
     "present_singular_3rd": "begeeft zich",
     "simple_past_singular": "begaf zich",
     "simple_past_plural": "begaven zich",
-    "past_participle": "begeven", // No extra 'ge-'
+    "past_participle": "begeven", 
     "auxiliary_verb": "hebben",
     "example_present": "Hij begeeft zich naar de uitgang.",
     "example_perfect": "Hij heeft zich naar buiten begeven.",
@@ -3252,8 +3252,8 @@
     "verb_id": 172,
     "infinitive": "zich bekommeren (om)",
     "translation": "to concern oneself (with) / to take care (of)",
-    "base_verb": "kommeren", // 'kommeren' not used alone
-    "prefix": "be", // Inseparable prefix
+    "base_verb": "kommeren",
+    "prefix": "be", 
     "is_separable": false,
     "is_reflexive": true,
     "type": "weak",
@@ -3261,7 +3261,7 @@
     "present_singular_3rd": "bekommert zich",
     "simple_past_singular": "bekommerde zich",
     "simple_past_plural": "bekommerden zich",
-    "past_participle": "bekommerd", // No extra 'ge-'
+    "past_participle": "bekommerd", 
     "auxiliary_verb": "hebben",
     "example_present": "Hij bekommert zich om zijn zieke moeder.",
     "example_perfect": "Hij heeft zich altijd om haar bekommerd.",
@@ -3294,10 +3294,10 @@
     "prefix": "in",
     "is_separable": true,
     "is_reflexive": true,
-    "type": "strong", // like 'spannen' (spon)
+    "type": "strong",
     "present_stem": "span in",
     "present_singular_3rd": "spant zich in",
-    "simple_past_singular": "spande zich in", // Weak past, unlike 'spannen' (spon)
+    "simple_past_singular": "spande zich in",
     "simple_past_plural": "spanden zich in",
     "past_participle": "ingespannen",
     "auxiliary_verb": "hebben",
@@ -3309,7 +3309,7 @@
     "verb_id": 175,
     "infinitive": "zich permitteren",
     "translation": "to permit oneself / to afford",
-    "base_verb": "permitteren", // from French
+    "base_verb": "permitteren",
     "prefix": null,
     "is_separable": false,
     "is_reflexive": true,
@@ -3347,7 +3347,7 @@
     "verb_id": 177,
     "infinitive": "zich verbazen (over)",
     "translation": "to be amazed (at/by)",
-    "base_verb": "bazen", // 'bazen' not used like this
+    "base_verb": "bazen", 
     "prefix": "ver", // Inseparable prefix
     "is_separable": false,
     "is_reflexive": true,
@@ -3356,7 +3356,7 @@
     "present_singular_3rd": "verbaast zich",
     "simple_past_singular": "verbaasde zich",
     "simple_past_plural": "verbaasden zich",
-    "past_participle": "verbaasd", // No extra 'ge-'
+    "past_participle": "verbaasd", 
     "auxiliary_verb": "hebben",
     "example_present": "Ik verbaas me over zijn reactie.",
     "example_perfect": "Ik heb me over zijn reactie verbaasd.",
@@ -3366,8 +3366,8 @@
     "verb_id": 178,
     "infinitive": "zich veroorloven",
     "translation": "to afford / to permit oneself",
-    "base_verb": "oorloven", // 'oorloven' not used alone
-    "prefix": "ver", // Inseparable prefix
+    "base_verb": "oorloven", 
+    "prefix": "ver",
     "is_separable": false,
     "is_reflexive": true,
     "type": "weak",
@@ -3375,7 +3375,7 @@
     "present_singular_3rd": "veroorlooft zich",
     "simple_past_singular": "veroorloofde zich",
     "simple_past_plural": "veroorloofden zich",
-    "past_participle": "veroorloofd", // No extra 'ge-'
+    "past_participle": "veroorloofd", 
     "auxiliary_verb": "hebben",
     "example_present": "Ik kan me geen nieuwe auto veroorloven.",
     "example_perfect": "Hij heeft zich veel vrijheden veroorloofd.",
@@ -3396,19 +3396,19 @@
     "simple_past_plural": "pleegden",
     "past_participle": "gepleegd",
     "auxiliary_verb": "hebben",
-    "example_present": "Hij pleegt een misdaad.", // Meaning: commit
-    "example_perfect": "Hij heeft een misdaad gepleegd.", // Meaning: commit
-    "difficulty_level": 5 // Auxiliary usage 'ik pleeg te gaan' is very formal/archaic
+    "example_present": "Hij pleegt een misdaad.", 
+    "example_perfect": "Hij heeft een misdaad gepleegd.", 
+    "difficulty_level": 5  
   },
   {
     "verb_id": 180,
     "infinitive": "weerleggen",
     "translation": "to refute / to disprove",
     "base_verb": "leggen",
-    "prefix": "weer", // Inseparable prefix
+    "prefix": "weer",
     "is_separable": false,
     "is_reflexive": false,
-    "type": "weak / irregular past", // like 'leggen'
+    "type": "weak / irregular past",
     "present_stem": "weerleg",
     "present_singular_3rd": "weerlegt",
     "simple_past_singular": "weerlegde",
