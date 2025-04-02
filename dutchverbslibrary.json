@@ -6,9 +6,9 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
-    "is_reflexive": false, // Added
+    "is_reflexive": false,
     "type": "irregular / auxiliary",
-    "present_stem": null, // Irregular stem
+    "present_stem": null,
     "present_singular_3rd": "is",
     "simple_past_singular": "was",
     "simple_past_plural": "waren",
@@ -25,7 +25,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
-    "is_reflexive": false, // Added
+    "is_reflexive": false,
     "type": "irregular / auxiliary",
     "present_stem": "heb",
     "present_singular_3rd": "heeft",
@@ -44,7 +44,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
-    "is_reflexive": false, // Added
+    "is_reflexive": false,
     "type": "strong / irregular",
     "present_stem": "ga",
     "present_singular_3rd": "gaat",
@@ -63,9 +63,9 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
-    "is_reflexive": false, // Added
+    "is_reflexive": false,
     "type": "modal / irregular",
-    "present_stem": null, // Irregular stem
+    "present_stem": null,
     "present_singular_3rd": "kan",
     "simple_past_singular": "kon",
     "simple_past_plural": "konden",
@@ -82,7 +82,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
-    "is_reflexive": false, // Added
+    "is_reflexive": false,
     "type": "modal / irregular",
     "present_stem": "moet",
     "present_singular_3rd": "moet",
@@ -101,9 +101,9 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
-    "is_reflexive": false, // Added
+    "is_reflexive": false,
     "type": "modal / irregular",
-    "present_stem": null, // Irregular stem
+    "present_stem": null,
     "present_singular_3rd": "wil",
     "simple_past_singular": "wilde / wou",
     "simple_past_plural": "wilden",
@@ -120,7 +120,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
-    "is_reflexive": false, // Added
+    "is_reflexive": false,
     "type": "weak / irregular past",
     "present_stem": "zeg",
     "present_singular_3rd": "zegt",
@@ -139,7 +139,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
-    "is_reflexive": false, // Added
+    "is_reflexive": false,
     "type": "strong",
     "present_stem": "kom",
     "present_singular_3rd": "komt",
@@ -158,7 +158,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
-    "is_reflexive": false, // Added
+    "is_reflexive": false,
     "type": "strong / irregular",
     "present_stem": "doe",
     "present_singular_3rd": "doet",
@@ -177,7 +177,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
-    "is_reflexive": false, // Added
+    "is_reflexive": false,
     "type": "weak",
     "present_stem": "maak",
     "present_singular_3rd": "maakt",
@@ -196,7 +196,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
-    "is_reflexive": false, // Added
+    "is_reflexive": false,
     "type": "irregular",
     "present_stem": "weet",
     "present_singular_3rd": "weet",
@@ -215,7 +215,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
-    "is_reflexive": false, // Added
+    "is_reflexive": false,
     "type": "strong / irregular",
     "present_stem": "sta",
     "present_singular_3rd": "staat",
@@ -234,7 +234,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
-    "is_reflexive": false, // Added
+    "is_reflexive": false,
     "type": "strong / irregular",
     "present_stem": "zie",
     "present_singular_3rd": "ziet",
@@ -253,7 +253,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
-    "is_reflexive": false, // Added
+    "is_reflexive": false,
     "type": "strong",
     "present_stem": "kijk",
     "present_singular_3rd": "kijkt",
@@ -272,7 +272,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
-    "is_reflexive": false, // Added
+    "is_reflexive": false,
     "type": "strong",
     "present_stem": "krijg",
     "present_singular_3rd": "krijgt",
@@ -291,7 +291,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
-    "is_reflexive": false, // Added
+    "is_reflexive": false,
     "type": "strong",
     "present_stem": "laat",
     "present_singular_3rd": "laat",
@@ -310,7 +310,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
-    "is_reflexive": false, // Added
+    "is_reflexive": false,
     "type": "strong / irregular",
     "present_stem": "denk",
     "present_singular_3rd": "denkt",
@@ -329,7 +329,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
-    "is_reflexive": false, // Added
+    "is_reflexive": false,
     "type": "strong",
     "present_stem": "vind",
     "present_singular_3rd": "vindt",
@@ -348,7 +348,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
-    "is_reflexive": false, // Added
+    "is_reflexive": false,
     "type": "strong",
     "present_stem": "geef",
     "present_singular_3rd": "geeft",
@@ -367,7 +367,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
-    "is_reflexive": false, // Added
+    "is_reflexive": false,
     "type": "weak",
     "present_stem": "werk",
     "present_singular_3rd": "werkt",
@@ -386,7 +386,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
-    "is_reflexive": false, // Added
+    "is_reflexive": false,
     "type": "strong",
     "present_stem": "neem",
     "present_singular_3rd": "neemt",
@@ -405,7 +405,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
-    "is_reflexive": false, // Added
+    "is_reflexive": false,
     "type": "strong",
     "present_stem": "blijf",
     "present_singular_3rd": "blijft",
@@ -424,7 +424,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
-    "is_reflexive": false, // Added
+    "is_reflexive": false,
     "type": "strong",
     "present_stem": "loop",
     "present_singular_3rd": "loopt",
@@ -443,7 +443,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
-    "is_reflexive": false, // Added
+    "is_reflexive": false,
     "type": "strong",
     "present_stem": "zit",
     "present_singular_3rd": "zit",
@@ -462,7 +462,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
-    "is_reflexive": false, // Added
+    "is_reflexive": false,
     "type": "weak",
     "present_stem": "hoor",
     "present_singular_3rd": "hoort",
@@ -481,7 +481,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
-    "is_reflexive": false, // Added
+    "is_reflexive": false,
     "type": "strong / irregular",
     "present_stem": "vraag",
     "present_singular_3rd": "vraagt",
@@ -500,7 +500,7 @@
     "base_verb": "bruiken",
     "prefix": "ge",
     "is_separable": false,
-    "is_reflexive": false, // Added
+    "is_reflexive": false,
     "type": "weak",
     "present_stem": "gebruik",
     "present_singular_3rd": "gebruikt",
@@ -519,7 +519,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
-    "is_reflexive": false, // Added
+    "is_reflexive": false,
     "type": "strong / irregular",
     "present_stem": "koop",
     "present_singular_3rd": "koopt",
@@ -538,7 +538,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
-    "is_reflexive": false, // Added
+    "is_reflexive": false,
     "type": "strong",
     "present_stem": "lees",
     "present_singular_3rd": "leest",
@@ -557,7 +557,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
-    "is_reflexive": false, // Added
+    "is_reflexive": false,
     "type": "strong",
     "present_stem": "eet",
     "present_singular_3rd": "eet",
@@ -611,8 +611,8 @@
     "verb_id": 33,
     "infinitive": "geloven",
     "translation": "to believe",
-    "base_verb": null, // 'loven' exists but different meaning
-    "prefix": "ge", // Inseparable prefix
+    "base_verb": null,
+    "prefix": "ge",
     "is_separable": false,
     "is_reflexive": false,
     "type": "weak",
@@ -620,7 +620,7 @@
     "present_singular_3rd": "gelooft",
     "simple_past_singular": "geloofde",
     "simple_past_plural": "geloofden",
-    "past_participle": "geloofd", // No extra 'ge-'
+    "past_participle": "geloofd",
     "auxiliary_verb": "hebben",
     "example_present": "Ik geloof je.",
     "example_perfect": "Ik heb hem altijd geloofd.",
@@ -642,15 +642,15 @@
     "past_participle": "gehouden",
     "auxiliary_verb": "hebben",
     "example_present": "Houd de deur vast.",
-    "example_perfect": "Hij heeft de deur vastgehouden.", // Example uses compound 'vasthouden' here
+    "example_perfect": "Hij heeft de deur vastgehouden.",
     "difficulty_level": 1
   },
   {
     "verb_id": 35,
     "infinitive": "beginnen",
     "translation": "to begin / to start",
-    "base_verb": null, // 'ginnen' doesn't exist
-    "prefix": "be", // Inseparable prefix
+    "base_verb": null,
+    "prefix": "be",
     "is_separable": false,
     "is_reflexive": false,
     "type": "strong",
@@ -658,7 +658,7 @@
     "present_singular_3rd": "begint",
     "simple_past_singular": "begon",
     "simple_past_plural": "begonnen",
-    "past_participle": "begonnen", // No extra 'ge-'
+    "past_participle": "begonnen",
     "auxiliary_verb": "zijn",
     "example_present": "De film begint om 8 uur.",
     "example_perfect": "De film is om 8 uur begonnen.",
@@ -748,7 +748,7 @@
     "prefix": null,
     "is_separable": false,
     "is_reflexive": false,
-    "type": "strong / auxiliary", // Also passive auxiliary
+    "type": "strong / auxiliary",
     "present_stem": "word",
     "present_singular_3rd": "wordt",
     "simple_past_singular": "werd",
@@ -773,7 +773,7 @@
     "simple_past_singular": "volgde",
     "simple_past_plural": "volgden",
     "past_participle": "gevolgd",
-    "auxiliary_verb": "hebben / zijn", // Hebben (followed course), Zijn (followed person)
+    "auxiliary_verb": "hebben / zijn",
     "example_present": "Volg mij.",
     "example_perfect": "Ik heb die cursus gevolgd. / Ik ben hem gevolgd.",
     "difficulty_level": 1
@@ -786,7 +786,7 @@
     "prefix": null,
     "is_separable": false,
     "is_reflexive": false,
-    "type": "strong / irregular", // Past tense 'bracht' is irregular
+    "type": "strong / irregular",
     "present_stem": "breng",
     "present_singular_3rd": "brengt",
     "simple_past_singular": "bracht",
@@ -821,7 +821,7 @@
     "infinitive": "vertellen",
     "translation": "to tell",
     "base_verb": "tellen",
-    "prefix": "ver", // Inseparable prefix
+    "prefix": "ver",
     "is_separable": false,
     "is_reflexive": false,
     "type": "weak",
@@ -829,7 +829,7 @@
     "present_singular_3rd": "vertelt",
     "simple_past_singular": "vertelde",
     "simple_past_plural": "vertelden",
-    "past_participle": "verteld", // No extra 'ge-'
+    "past_participle": "verteld",
     "auxiliary_verb": "hebben",
     "example_present": "Vertel me een verhaal.",
     "example_perfect": "Hij heeft een verhaal verteld.",
@@ -843,7 +843,7 @@
     "prefix": null,
     "is_separable": false,
     "is_reflexive": false,
-    "type": "weak / irregular past", // Past tense 'kende'
+    "type": "weak / irregular past",
     "present_stem": "ken",
     "present_singular_3rd": "kent",
     "simple_past_singular": "kende",
@@ -862,7 +862,7 @@
     "prefix": null,
     "is_separable": false,
     "is_reflexive": false,
-    "type": "strong / irregular", // Past tense 'zocht' is irregular
+    "type": "strong / irregular",
     "present_stem": "zoek",
     "present_singular_3rd": "zoekt",
     "simple_past_singular": "zocht",
@@ -889,7 +889,7 @@
     "past_participle": "geleken",
     "auxiliary_verb": "hebben",
     "example_present": "Het lijkt te gaan regenen.",
-    "example_perfect": "Het heeft geregend geleken.", // Awkward, usually avoided
+    "example_perfect": "Het heeft geregend geleken.",
     "difficulty_level": 1
   },
   {
@@ -897,7 +897,7 @@
     "infinitive": "betekenen",
     "translation": "to mean / to signify",
     "base_verb": "tekenen",
-    "prefix": "be", // Inseparable prefix
+    "prefix": "be",
     "is_separable": false,
     "is_reflexive": false,
     "type": "weak",
@@ -905,7 +905,7 @@
     "present_singular_3rd": "betekent",
     "simple_past_singular": "betekende",
     "simple_past_plural": "betekenden",
-    "past_participle": "betekend", // No extra 'ge-'
+    "past_participle": "betekend",
     "auxiliary_verb": "hebben",
     "example_present": "Wat betekent dit woord?",
     "example_perfect": "Dat heeft veel betekend.",
@@ -937,7 +937,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
-    "is_reflexive": true, // Common usage: zich voelen (how one feels)
+    "is_reflexive": true,
     "type": "weak",
     "present_stem": "voel",
     "present_singular_3rd": "voelt",
@@ -1048,8 +1048,8 @@
     "verb_id": 56,
     "infinitive": "betalen",
     "translation": "to pay",
-    "base_verb": "talen", // 'talen naar' exists but different meaning
-    "prefix": "be", // Inseparable prefix
+    "base_verb": "talen",
+    "prefix": "be",
     "is_separable": false,
     "is_reflexive": false,
     "type": "weak",
@@ -1057,7 +1057,7 @@
     "present_singular_3rd": "betaalt",
     "simple_past_singular": "betaalde",
     "simple_past_plural": "betaalden",
-    "past_participle": "betaald", // No extra 'ge-'
+    "past_participle": "betaald",
     "auxiliary_verb": "hebben",
     "example_present": "Ik moet de rekening betalen.",
     "example_perfect": "Ik heb de rekening betaald.",
@@ -1086,17 +1086,17 @@
     "verb_id": 58,
     "infinitive": "vergeten",
     "translation": "to forget",
-    "base_verb": "geten", // 'geten' is archaic/poetic
-    "prefix": "ver", // Inseparable prefix
+    "base_verb": "geten",
+    "prefix": "ver",
     "is_separable": false,
-    "is_reflexive": false, // Can be reflexive ('zich vergeten') but not primary meaning
+    "is_reflexive": false,
     "type": "strong",
     "present_stem": "vergeet",
     "present_singular_3rd": "vergeet",
     "simple_past_singular": "vergat",
     "simple_past_plural": "vergaten",
-    "past_participle": "vergeten", // No extra 'ge-'
-    "auxiliary_verb": "hebben / zijn", // Hebben (forgotten object), Zijn (forgotten action/state)
+    "past_participle": "vergeten",
+    "auxiliary_verb": "hebben / zijn",
     "example_present": "Vergeet je sleutels niet.",
     "example_perfect": "Ik heb mijn sleutels vergeten. / Ik ben vergeten te bellen.",
     "difficulty_level": 1
@@ -1134,26 +1134,25 @@
     "simple_past_singular": "reed",
     "simple_past_plural": "reden",
     "past_participle": "gereden",
-    "auxiliary_verb": "hebben / zijn", // Hebben (general riding), Zijn (direction/destination)
+    "auxiliary_verb": "hebben / zijn",
     "example_present": "Ik rijd naar mijn werk.",
     "example_perfect": "Ik heb paard gereden. / Ik ben naar mijn werk gereden.",
     "difficulty_level": 1
   },
-
   {
     "verb_id": 61,
     "infinitive": "bestaan",
     "translation": "to exist",
     "base_verb": "staan",
-    "prefix": "be", // Inseparable prefix
+    "prefix": "be",
     "is_separable": false,
     "is_reflexive": false,
-    "type": "strong / irregular", // like 'staan'
+    "type": "strong / irregular",
     "present_stem": "besta",
     "present_singular_3rd": "bestaat",
     "simple_past_singular": "bestond",
     "simple_past_plural": "bestonden",
-    "past_participle": "bestaan", // No extra 'ge-'
+    "past_participle": "bestaan",
     "auxiliary_verb": "hebben",
     "example_present": "Dit probleem bestaat al lang.",
     "example_perfect": "Dit probleem heeft altijd bestaan.",
@@ -1258,8 +1257,8 @@
     "verb_id": 67,
     "infinitive": "gebeuren",
     "translation": "to happen",
-    "base_verb": null, // 'beuren' exists but rare/dialect
-    "prefix": "ge", // Inseparable prefix
+    "base_verb": null,
+    "prefix": "ge",
     "is_separable": false,
     "is_reflexive": false,
     "type": "weak",
@@ -1267,7 +1266,7 @@
     "present_singular_3rd": "gebeurt",
     "simple_past_singular": "gebeurde",
     "simple_past_plural": "gebeurden",
-    "past_participle": "gebeurd", // No extra 'ge-'
+    "past_participle": "gebeurd",
     "auxiliary_verb": "zijn",
     "example_present": "Wat gebeurt er?",
     "example_perfect": "Er is een ongeluk gebeurd.",
@@ -1296,8 +1295,8 @@
     "verb_id": 69,
     "infinitive": "verliezen",
     "translation": "to lose",
-    "base_verb": null, // 'liezen' doesn't exist
-    "prefix": "ver", // Inseparable prefix
+    "base_verb": null,
+    "prefix": "ver",
     "is_separable": false,
     "is_reflexive": false,
     "type": "strong",
@@ -1305,7 +1304,7 @@
     "present_singular_3rd": "verliest",
     "simple_past_singular": "verloor",
     "simple_past_plural": "verloren",
-    "past_participle": "verloren", // No extra 'ge-'
+    "past_participle": "verloren",
     "auxiliary_verb": "hebben",
     "example_present": "Ik verlies altijd mijn sleutels.",
     "example_perfect": "Ik heb mijn sleutels verloren.",
@@ -1337,7 +1336,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
-    "is_reflexive": false, // Often used impersonally: 'het lukt'
+    "is_reflexive": false,
     "type": "weak",
     "present_stem": "luk",
     "present_singular_3rd": "lukt",
@@ -1430,15 +1429,15 @@
     "infinitive": "ontmoeten",
     "translation": "to meet (someone)",
     "base_verb": "moeten",
-    "prefix": "ont", // Inseparable prefix
+    "prefix": "ont",
     "is_separable": false,
     "is_reflexive": false,
-    "type": "weak", // Despite 'moeten' being irregular, 'ontmoeten' is weak
+    "type": "weak",
     "present_stem": "ontmoet",
     "present_singular_3rd": "ontmoet",
     "simple_past_singular": "ontmoette",
     "simple_past_plural": "ontmoetten",
-    "past_participle": "ontmoet", // No extra 'ge-'
+    "past_participle": "ontmoet",
     "auxiliary_verb": "hebben",
     "example_present": "Ik ontmoet hem morgen.",
     "example_perfect": "Ik heb hem gisteren ontmoet.",
@@ -1452,7 +1451,7 @@
     "prefix": null,
     "is_separable": false,
     "is_reflexive": false,
-    "type": "weak / irregular past", // Past tense 'legde'/'gelegd'
+    "type": "weak / irregular past",
     "present_stem": "leg",
     "present_singular_3rd": "legt",
     "simple_past_singular": "legde",
@@ -1543,8 +1542,8 @@
     "verb_id": 82,
     "infinitive": "beslissen",
     "translation": "to decide",
-    "base_verb": null, // 'slissen' doesn't exist
-    "prefix": "be", // Inseparable prefix
+    "base_verb": null,
+    "prefix": "be",
     "is_separable": false,
     "is_reflexive": false,
     "type": "weak",
@@ -1552,7 +1551,7 @@
     "present_singular_3rd": "beslist",
     "simple_past_singular": "besliste",
     "simple_past_plural": "beslisten",
-    "past_participle": "beslist", // No extra 'ge-'
+    "past_participle": "beslist",
     "auxiliary_verb": "hebben",
     "example_present": "Wat beslis je?",
     "example_perfect": "Ik heb nog niets beslist.",
@@ -1566,7 +1565,7 @@
     "prefix": "uit",
     "is_separable": true,
     "is_reflexive": false,
-    "type": "weak / irregular past", // like 'leggen'
+    "type": "weak / irregular past",
     "present_stem": "leg uit",
     "present_singular_3rd": "legt uit",
     "simple_past_singular": "legde uit",
@@ -1585,7 +1584,7 @@
     "prefix": "op",
     "is_separable": true,
     "is_reflexive": false,
-    "type": "strong / irregular", // like 'staan'
+    "type": "strong / irregular",
     "present_stem": "sta op",
     "present_singular_3rd": "staat op",
     "simple_past_singular": "stond op",
@@ -1604,7 +1603,7 @@
     "prefix": "mee",
     "is_separable": true,
     "is_reflexive": false,
-    "type": "strong", // like 'nemen'
+    "type": "strong",
     "present_stem": "neem mee",
     "present_singular_3rd": "neemt mee",
     "simple_past_singular": "nam mee",
@@ -1623,7 +1622,7 @@
     "prefix": "af",
     "is_separable": true,
     "is_reflexive": false,
-    "type": "strong", // like 'spreken'
+    "type": "strong",
     "present_stem": "spreek af",
     "present_singular_3rd": "spreekt af",
     "simple_past_singular": "sprak af",
@@ -1638,16 +1637,16 @@
     "verb_id": 87,
     "infinitive": "herinneren",
     "translation": "to remember / to remind",
-    "base_verb": null, // 'inneren' doesn't exist
-    "prefix": "her", // Inseparable prefix
+    "base_verb": null,
+    "prefix": "her",
     "is_separable": false,
-    "is_reflexive": true, // Common usage: zich herinneren (to remember)
+    "is_reflexive": true,
     "type": "weak",
     "present_stem": "herinner",
     "present_singular_3rd": "herinnert",
     "simple_past_singular": "herinnerde",
     "simple_past_plural": "herinnerden",
-    "past_participle": "herinnerd", // No extra 'ge-'
+    "past_participle": "herinnerd",
     "auxiliary_verb": "hebben",
     "example_present": "Herinner je je dat?",
     "example_perfect": "Ik heb het me plotseling herinnerd.",
@@ -1660,8 +1659,8 @@
     "base_verb": "bereiden",
     "prefix": "voor",
     "is_separable": true,
-    "is_reflexive": true, // Common usage: zich voorbereiden (to prepare oneself)
-    "type": "weak", // like 'bereiden'
+    "is_reflexive": true,
+    "type": "weak",
     "present_stem": "bereid voor",
     "present_singular_3rd": "bereidt voor",
     "simple_past_singular": "bereidde voor",
@@ -1710,21 +1709,20 @@
     "example_perfect": "Hij heeft een bericht online geplaatst.",
     "difficulty_level": 2
   },
-
   {
     "verb_id": 91,
     "infinitive": "verwachten",
     "translation": "to expect",
     "base_verb": "wachten",
-    "prefix": "ver", // Inseparable prefix
+    "prefix": "ver",
     "is_separable": false,
     "is_reflexive": false,
-    "type": "weak", // like 'wachten'
+    "type": "weak",
     "present_stem": "verwacht",
     "present_singular_3rd": "verwacht",
     "simple_past_singular": "verwachtte",
     "simple_past_plural": "verwachtten",
-    "past_participle": "verwacht", // No extra 'ge-'
+    "past_participle": "verwacht",
     "auxiliary_verb": "hebben",
     "example_present": "Ik verwacht regen vandaag.",
     "example_perfect": "Ik had dit niet verwacht.",
@@ -1737,7 +1735,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
-    "is_reflexive": false, // Can be reflexive ('zich voorstellen') but not base meaning
+    "is_reflexive": false,
     "type": "weak",
     "present_stem": "stel",
     "present_singular_3rd": "stelt",
@@ -1772,16 +1770,16 @@
     "verb_id": 94,
     "infinitive": "ontwikkelen",
     "translation": "to develop",
-    "base_verb": null, // 'wikkelen' exists but different meaning
-    "prefix": "ont", // Inseparable prefix
+    "base_verb": null,
+    "prefix": "ont",
     "is_separable": false,
-    "is_reflexive": true, // Common usage: zich ontwikkelen (to develop oneself)
+    "is_reflexive": true,
     "type": "weak",
     "present_stem": "ontwikkel",
     "present_singular_3rd": "ontwikkelt",
     "simple_past_singular": "ontwikkelde",
     "simple_past_plural": "ontwikkelden",
-    "past_participle": "ontwikkeld", // No extra 'ge-'
+    "past_participle": "ontwikkeld",
     "auxiliary_verb": "hebben",
     "example_present": "Het bedrijf ontwikkelt nieuwe software.",
     "example_perfect": "Hij heeft zich snel ontwikkeld.",
@@ -1795,7 +1793,7 @@
     "prefix": "op",
     "is_separable": true,
     "is_reflexive": false,
-    "type": "weak", // like 'halen'
+    "type": "weak",
     "present_stem": "haal op",
     "present_singular_3rd": "haalt op",
     "simple_past_singular": "haalde op",
@@ -1814,7 +1812,7 @@
     "prefix": "terug",
     "is_separable": true,
     "is_reflexive": false,
-    "type": "strong", // like 'komen'
+    "type": "strong",
     "present_stem": "kom terug",
     "present_singular_3rd": "komt terug",
     "simple_past_singular": "kwam terug",
@@ -1829,17 +1827,17 @@
     "verb_id": 97,
     "infinitive": "veranderen",
     "translation": "to change (something)",
-    "base_verb": "anderen", // 'anderen' not really used as verb
-    "prefix": "ver", // Inseparable prefix
+    "base_verb": "anderen",
+    "prefix": "ver",
     "is_separable": false,
-    "is_reflexive": false, // Can be reflexive ('zich veranderen') but often transitive or intransitive
+    "is_reflexive": false,
     "type": "weak",
     "present_stem": "verander",
     "present_singular_3rd": "verandert",
     "simple_past_singular": "veranderde",
     "simple_past_plural": "veranderden",
-    "past_participle": "veranderd", // No extra 'ge-'
-    "auxiliary_verb": "hebben / zijn", // Hebben (changed something), Zijn (subject itself changed)
+    "past_participle": "veranderd",
+    "auxiliary_verb": "hebben / zijn",
     "example_present": "Het weer verandert snel.",
     "example_perfect": "Hij heeft zijn plan veranderd. / Het weer is veranderd.",
     "difficulty_level": 3
@@ -1849,15 +1847,15 @@
     "infinitive": "bespreken",
     "translation": "to discuss",
     "base_verb": "spreken",
-    "prefix": "be", // Inseparable prefix
+    "prefix": "be",
     "is_separable": false,
     "is_reflexive": false,
-    "type": "strong", // like 'spreken'
+    "type": "strong",
     "present_stem": "bespreek",
     "present_singular_3rd": "bespreekt",
     "simple_past_singular": "besprak",
     "simple_past_plural": "bespraken",
-    "past_participle": "besproken", // No extra 'ge-'
+    "past_participle": "besproken",
     "auxiliary_verb": "hebben",
     "example_present": "We bespreken het plan morgen.",
     "example_perfect": "We hebben het plan besproken.",
@@ -1871,7 +1869,7 @@
     "prefix": "deel",
     "is_separable": true,
     "is_reflexive": false,
-    "type": "strong", // like 'nemen'
+    "type": "strong",
     "present_stem": "neem deel",
     "present_singular_3rd": "neemt deel",
     "simple_past_singular": "nam deel",
@@ -1890,7 +1888,7 @@
     "prefix": "in",
     "is_separable": true,
     "is_reflexive": false,
-    "type": "weak", // like 'vullen'
+    "type": "weak",
     "present_stem": "vul in",
     "present_singular_3rd": "vult in",
     "simple_past_singular": "vulde in",
@@ -1901,7 +1899,7 @@
     "example_perfect": "Ik heb het formulier ingevuld.",
     "difficulty_level": 3
   },
-   {
+  {
     "verb_id": 101,
     "infinitive": "aankomen",
     "translation": "to arrive",
@@ -1909,7 +1907,7 @@
     "prefix": "aan",
     "is_separable": true,
     "is_reflexive": false,
-    "type": "strong", // like 'komen'
+    "type": "strong",
     "present_stem": "kom aan",
     "present_singular_3rd": "komt aan",
     "simple_past_singular": "kwam aan",
@@ -1925,15 +1923,15 @@
     "infinitive": "vertrekken",
     "translation": "to depart / to leave",
     "base_verb": "trekken",
-    "prefix": "ver", // Inseparable prefix
+    "prefix": "ver",
     "is_separable": false,
     "is_reflexive": false,
-    "type": "strong / irregular", // Past tense 'vertrok'
+    "type": "strong / irregular",
     "present_stem": "vertrek",
     "present_singular_3rd": "vertrekt",
     "simple_past_singular": "vertrok",
     "simple_past_plural": "vertrokken",
-    "past_participle": "vertrokken", // No extra 'ge-'
+    "past_participle": "vertrokken",
     "auxiliary_verb": "zijn",
     "example_present": "De bus vertrekt zo.",
     "example_perfect": "De bus is al vertrokken.",
@@ -1947,44 +1945,44 @@
     "prefix": "op",
     "is_separable": true,
     "is_reflexive": false,
-    "type": "strong", // like 'houden'
+    "type": "strong",
     "present_stem": "houd op",
     "present_singular_3rd": "houdt op",
     "simple_past_singular": "hield op",
     "simple_past_plural": "hielden op",
     "past_participle": "opgehouden",
-    "auxiliary_verb": "zijn", // Usually 'zijn' when meaning 'to cease'
+    "auxiliary_verb": "zijn",
     "example_present": "Houd op met klagen!",
-    "example_perfect": "Het heeft opgehouden met regenen.", // Or: Het is opgehouden met regenen.
+    "example_perfect": "Het heeft opgehouden met regenen.",
     "difficulty_level": 3
   },
   {
     "verb_id": 104,
     "infinitive": "voorkomen",
-    "translation": "to prevent / to occur", // Note: two distinct meanings! Sticking with 'prevent' as primary for this entry.
+    "translation": "to prevent / to occur",
     "base_verb": "komen",
-    "prefix": "voor", // Inseparable when meaning 'prevent', Separable when meaning 'occur' ('het komt voor')
-    "is_separable": false, // For the meaning 'prevent'
+    "prefix": "voor",
+    "is_separable": false,
     "is_reflexive": false,
-    "type": "strong", // like 'komen'
+    "type": "strong",
     "present_stem": "voorkom",
     "present_singular_3rd": "voorkomt",
     "simple_past_singular": "voorkwam",
     "simple_past_plural": "voorkwamen",
-    "past_participle": "voorkomen", // No extra 'ge-'
+    "past_participle": "voorkomen",
     "auxiliary_verb": "hebben",
     "example_present": "We moeten ongelukken voorkomen.",
     "example_perfect": "We hebben het ongeluk voorkomen.",
     "difficulty_level": 3
   },
-   {
+  {
     "verb_id": 105,
     "infinitive": "melden",
     "translation": "to report / to notify",
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
-    "is_reflexive": true, // Common usage: zich melden (to report oneself)
+    "is_reflexive": true,
     "type": "weak",
     "present_stem": "meld",
     "present_singular_3rd": "meldt",
@@ -2038,8 +2036,8 @@
     "verb_id": 108,
     "infinitive": "verdwijnen",
     "translation": "to disappear",
-    "base_verb": null, // 'dwijnen' doesn't exist
-    "prefix": "ver", // Inseparable prefix
+    "base_verb": null,
+    "prefix": "ver",
     "is_separable": false,
     "is_reflexive": false,
     "type": "strong",
@@ -2047,7 +2045,7 @@
     "present_singular_3rd": "verdwijnt",
     "simple_past_singular": "verdween",
     "simple_past_plural": "verdwenen",
-    "past_participle": "verdwenen", // No extra 'ge-'
+    "past_participle": "verdwenen",
     "auxiliary_verb": "zijn",
     "example_present": "De zon verdwijnt achter de wolken.",
     "example_perfect": "Mijn portemonnee is verdwenen.",
@@ -2069,7 +2067,7 @@
     "past_participle": "geboden",
     "auxiliary_verb": "hebben",
     "example_present": "Hij biedt hulp aan.",
-    "example_perfect": "Hij heeft hulp aangeboden.", // Example uses compound 'aanbieden'
+    "example_perfect": "Hij heeft hulp aangeboden.",
     "difficulty_level": 3
   },
   {
@@ -2077,15 +2075,15 @@
     "infinitive": "verkopen",
     "translation": "to sell",
     "base_verb": "kopen",
-    "prefix": "ver", // Inseparable prefix
+    "prefix": "ver",
     "is_separable": false,
     "is_reflexive": false,
-    "type": "strong / irregular", // like 'kopen'
+    "type": "strong / irregular",
     "present_stem": "verkoop",
     "present_singular_3rd": "verkoopt",
     "simple_past_singular": "verkocht",
     "simple_past_plural": "verkochten",
-    "past_participle": "verkocht", // No extra 'ge-'
+    "past_participle": "verkocht",
     "auxiliary_verb": "hebben",
     "example_present": "Zij verkoopt haar huis.",
     "example_perfect": "Zij heeft haar huis verkocht.",
@@ -2153,15 +2151,15 @@
     "infinitive": "bezoeken",
     "translation": "to visit",
     "base_verb": "zoeken",
-    "prefix": "be", // Inseparable prefix
+    "prefix": "be",
     "is_separable": false,
     "is_reflexive": false,
-    "type": "strong / irregular", // like 'zoeken'
+    "type": "strong / irregular",
     "present_stem": "bezoek",
     "present_singular_3rd": "bezoekt",
     "simple_past_singular": "bezocht",
     "simple_past_plural": "bezochten",
-    "past_participle": "bezocht", // No extra 'ge-'
+    "past_participle": "bezocht",
     "auxiliary_verb": "hebben",
     "example_present": "Ik bezoek mijn oma.",
     "example_perfect": "Ik heb mijn oma bezocht.",
@@ -2171,8 +2169,8 @@
     "verb_id": 115,
     "infinitive": "genieten",
     "translation": "to enjoy",
-    "base_verb": null, // 'nieten' exists but different meaning
-    "prefix": "ge", // Inseparable prefix
+    "base_verb": null,
+    "prefix": "ge",
     "is_separable": false,
     "is_reflexive": false,
     "type": "strong",
@@ -2180,13 +2178,13 @@
     "present_singular_3rd": "geniet",
     "simple_past_singular": "genoot",
     "simple_past_plural": "genoten",
-    "past_participle": "genoten", // No extra 'ge-'
+    "past_participle": "genoten",
     "auxiliary_verb": "hebben",
     "example_present": "Ik geniet van de zon.",
     "example_perfect": "Ik heb van de vakantie genoten.",
     "difficulty_level": 3
   },
-   {
+  {
     "verb_id": 116,
     "infinitive": "merken",
     "translation": "to notice / to mark",
@@ -2205,15 +2203,15 @@
     "example_perfect": "Ik heb niets gemerkt.",
     "difficulty_level": 3
   },
-   {
+  {
     "verb_id": 117,
     "infinitive": "nodig hebben",
     "translation": "to need",
-    "base_verb": "hebben", // Phrasal construction
+    "base_verb": "hebben",
     "prefix": null,
-    "is_separable": false, // Treated as a unit here
+    "is_separable": false,
     "is_reflexive": false,
-    "type": "irregular", // Follows 'hebben'
+    "type": "irregular",
     "present_stem": "heb nodig",
     "present_singular_3rd": "heeft nodig",
     "simple_past_singular": "had nodig",
@@ -2248,10 +2246,10 @@
     "infinitive": "overleggen",
     "translation": "to consult / to deliberate",
     "base_verb": "leggen",
-    "prefix": "over", // Inseparable here
+    "prefix": "over",
     "is_separable": false,
     "is_reflexive": false,
-    "type": "weak / irregular past", // like 'leggen'
+    "type": "weak / irregular past",
     "present_stem": "overleg",
     "present_singular_3rd": "overlegt",
     "simple_past_singular": "overlegde",
@@ -2270,10 +2268,10 @@
     "prefix": null,
     "is_separable": false,
     "is_reflexive": false,
-    "type": "strong", // Past tense 'ried'
+    "type": "strong",
     "present_stem": "raad",
     "present_singular_3rd": "raadt",
-    "simple_past_singular": "raadde / ried", // 'ried' more common for 'guess', 'raadde' for 'advise'
+    "simple_past_singular": "raadde / ried",
     "simple_past_plural": "raadden / rieden",
     "past_participle": "geraden",
     "auxiliary_verb": "hebben",
@@ -2281,13 +2279,12 @@
     "example_perfect": "Ik heb het antwoord geraden.",
     "difficulty_level": 3
   },
-
   {
     "verb_id": 121,
     "infinitive": "aanvaarden",
     "translation": "to accept",
-    "base_verb": null, // 'vaarden' not used like this
-    "prefix": "aan", // Inseparable prefix
+    "base_verb": null,
+    "prefix": "aan",
     "is_separable": false,
     "is_reflexive": false,
     "type": "weak",
@@ -2295,7 +2292,7 @@
     "present_singular_3rd": "aanvaardt",
     "simple_past_singular": "aanvaardde",
     "simple_past_plural": "aanvaardden",
-    "past_participle": "aanvaard", // No extra 'ge-'
+    "past_participle": "aanvaard",
     "auxiliary_verb": "hebben",
     "example_present": "Hij aanvaardt de consequenties.",
     "example_perfect": "Hij heeft de consequenties aanvaard.",
@@ -2306,15 +2303,15 @@
     "infinitive": "bevestigen",
     "translation": "to confirm",
     "base_verb": "vestigen",
-    "prefix": "be", // Inseparable prefix
+    "prefix": "be",
     "is_separable": false,
     "is_reflexive": false,
-    "type": "weak", // like 'vestigen'
+    "type": "weak",
     "present_stem": "bevestig",
     "present_singular_3rd": "bevestigt",
     "simple_past_singular": "bevestigde",
     "simple_past_plural": "bevestigden",
-    "past_participle": "bevestigd", // No extra 'ge-'
+    "past_participle": "bevestigd",
     "auxiliary_verb": "hebben",
     "example_present": "Kunt u de reservering bevestigen?",
     "example_perfect": "Ik heb de reservering bevestigd.",
@@ -2344,15 +2341,15 @@
     "infinitive": "onderhandelen",
     "translation": "to negotiate",
     "base_verb": "handelen",
-    "prefix": "onder", // Inseparable prefix
+    "prefix": "onder",
     "is_separable": false,
     "is_reflexive": false,
-    "type": "weak", // like 'handelen'
+    "type": "weak",
     "present_stem": "onderhandel",
     "present_singular_3rd": "onderhandelt",
     "simple_past_singular": "onderhandelde",
     "simple_past_plural": "onderhandelden",
-    "past_participle": "onderhandeld", // No extra 'ge-'
+    "past_participle": "onderhandeld",
     "auxiliary_verb": "hebben",
     "example_present": "De partijen onderhandelen over een akkoord.",
     "example_perfect": "De partijen hebben lang onderhandeld.",
@@ -2363,15 +2360,15 @@
     "infinitive": "onderscheiden",
     "translation": "to distinguish / to discern",
     "base_verb": "scheiden",
-    "prefix": "onder", // Inseparable prefix
+    "prefix": "onder",
     "is_separable": false,
-    "is_reflexive": true, // Common usage: zich onderscheiden (to distinguish oneself)
-    "type": "strong", // like 'scheiden'
+    "is_reflexive": true,
+    "type": "strong",
     "present_stem": "onderscheid",
     "present_singular_3rd": "onderscheidt",
-    "simple_past_singular": "onderscheidde", // Weak past, unlike 'scheiden' (schied)
+    "simple_past_singular": "onderscheidde",
     "simple_past_plural": "onderscheidden",
-    "past_participle": "onderscheiden", // No extra 'ge-'
+    "past_participle": "onderscheiden",
     "auxiliary_verb": "hebben",
     "example_present": "Hij onderscheidt zich door zijn talent.",
     "example_perfect": "Hij heeft zich altijd onderscheiden.",
@@ -2381,7 +2378,7 @@
     "verb_id": 126,
     "infinitive": "oplossen",
     "translation": "to solve / to dissolve",
-    "base_verb": "lossen", // 'lossen' exists but less common
+    "base_verb": "lossen",
     "prefix": "op",
     "is_separable": true,
     "is_reflexive": false,
@@ -2401,15 +2398,15 @@
     "infinitive": "overwegen",
     "translation": "to consider",
     "base_verb": "wegen",
-    "prefix": "over", // Inseparable prefix
+    "prefix": "over",
     "is_separable": false,
     "is_reflexive": false,
-    "type": "strong", // like 'wegen' (woog)
+    "type": "strong",
     "present_stem": "overweeg",
     "present_singular_3rd": "overweegt",
     "simple_past_singular": "overwoog",
     "simple_past_plural": "overwogen",
-    "past_participle": "overwogen", // No extra 'ge-'
+    "past_participle": "overwogen",
     "auxiliary_verb": "hebben",
     "example_present": "Ik overweeg om te verhuizen.",
     "example_perfect": "Ik heb het voorstel overwogen.",
@@ -2422,7 +2419,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
-    "is_reflexive": true, // Common usage: zich realiseren (to realize)
+    "is_reflexive": true,
     "type": "weak",
     "present_stem": "realiseer",
     "present_singular_3rd": "realiseert",
@@ -2461,7 +2458,7 @@
     "prefix": "toe",
     "is_separable": true,
     "is_reflexive": false,
-    "type": "weak", // like 'passen'
+    "type": "weak",
     "present_stem": "pas toe",
     "present_singular_3rd": "past toe",
     "simple_past_singular": "paste toe",
@@ -2480,7 +2477,7 @@
     "prefix": "uit",
     "is_separable": true,
     "is_reflexive": false,
-    "type": "strong", // like 'sluiten'
+    "type": "strong",
     "present_stem": "sluit uit",
     "present_singular_3rd": "sluit uit",
     "simple_past_singular": "sloot uit",
@@ -2488,15 +2485,15 @@
     "past_participle": "uitgesloten",
     "auxiliary_verb": "hebben",
     "example_present": "We sluiten niemand uit.",
-    "example_perfect": "Dat is volledig uitgesloten.", // Passive example
+    "example_perfect": "Dat is volledig uitgesloten.",
     "difficulty_level": 4
   },
   {
     "verb_id": 132,
     "infinitive": "veroorzaken",
     "translation": "to cause",
-    "base_verb": "oorzaken", // 'oorzaken' not used as verb
-    "prefix": "ver", // Inseparable prefix
+    "base_verb": "oorzaken",
+    "prefix": "ver",
     "is_separable": false,
     "is_reflexive": false,
     "type": "weak",
@@ -2504,7 +2501,7 @@
     "present_singular_3rd": "veroorzaakt",
     "simple_past_singular": "veroorzaakte",
     "simple_past_plural": "veroorzaakten",
-    "past_participle": "veroorzaakt", // No extra 'ge-'
+    "past_participle": "veroorzaakt",
     "auxiliary_verb": "hebben",
     "example_present": "Roken veroorzaakt kanker.",
     "example_perfect": "Het ongeluk heeft veel schade veroorzaakt.",
@@ -2515,7 +2512,7 @@
     "infinitive": "vertegenwoordigen",
     "translation": "to represent",
     "base_verb": null,
-    "prefix": "ver", // Inseparable prefix
+    "prefix": "ver",
     "is_separable": false,
     "is_reflexive": false,
     "type": "weak",
@@ -2523,7 +2520,7 @@
     "present_singular_3rd": "vertegenwoordigt",
     "simple_past_singular": "vertegenwoordigde",
     "simple_past_plural": "vertegenwoordigden",
-    "past_participle": "vertegenwoordigd", // No extra 'ge-'
+    "past_participle": "vertegenwoordigd",
     "auxiliary_verb": "hebben",
     "example_present": "Hij vertegenwoordigt het bedrijf.",
     "example_perfect": "Hij heeft het bedrijf goed vertegenwoordigd.",
@@ -2537,7 +2534,7 @@
     "prefix": "waar",
     "is_separable": true,
     "is_reflexive": false,
-    "type": "strong", // like 'nemen'
+    "type": "strong",
     "present_stem": "neem waar",
     "present_singular_3rd": "neemt waar",
     "simple_past_singular": "nam waar",
@@ -2594,7 +2591,7 @@
     "prefix": "aan",
     "is_separable": true,
     "is_reflexive": false,
-    "type": "strong", // like 'bevelen' (beval)
+    "type": "strong",
     "present_stem": "beveel aan",
     "present_singular_3rd": "beveelt aan",
     "simple_past_singular": "beval aan",
@@ -2613,7 +2610,7 @@
     "prefix": "af",
     "is_separable": true,
     "is_reflexive": false,
-    "type": "strong", // like 'hangen' (hing)
+    "type": "strong",
     "present_stem": "hang af",
     "present_singular_3rd": "hangt af",
     "simple_past_singular": "hing af",
@@ -2629,15 +2626,15 @@
     "infinitive": "beoordelen",
     "translation": "to judge / to assess",
     "base_verb": "oordelen",
-    "prefix": "be", // Inseparable prefix
+    "prefix": "be",
     "is_separable": false,
     "is_reflexive": false,
-    "type": "weak", // like 'oordelen'
+    "type": "weak",
     "present_stem": "beoordeel",
     "present_singular_3rd": "beoordeelt",
     "simple_past_singular": "beoordeelde",
     "simple_past_plural": "beoordeelden",
-    "past_participle": "beoordeeld", // No extra 'ge-'
+    "past_participle": "beoordeeld",
     "auxiliary_verb": "hebben",
     "example_present": "De jury beoordeelt de kandidaten.",
     "example_perfect": "De jury heeft de kandidaten beoordeeld.",
@@ -2648,21 +2645,21 @@
     "infinitive": "bevorderen",
     "translation": "to promote / to advance",
     "base_verb": "vorderen",
-    "prefix": "be", // Inseparable prefix
+    "prefix": "be",
     "is_separable": false,
     "is_reflexive": false,
-    "type": "weak", // like 'vorderen'
+    "type": "weak",
     "present_stem": "bevorder",
     "present_singular_3rd": "bevordert",
     "simple_past_singular": "bevorderde",
     "simple_past_plural": "bevorderden",
-    "past_participle": "bevorderd", // No extra 'ge-'
+    "past_participle": "bevorderd",
     "auxiliary_verb": "hebben",
     "example_present": "Dit beleid bevordert de economie.",
-    "example_perfect": "Hij is tot manager bevorderd.", // Passive example
+    "example_perfect": "Hij is tot manager bevorderd.",
     "difficulty_level": 4
   },
-   {
+  {
     "verb_id": 141,
     "infinitive": "garanderen",
     "translation": "to guarantee",
@@ -2678,7 +2675,7 @@
     "past_participle": "gegarandeerd",
     "auxiliary_verb": "hebben",
     "example_present": "Ik garandeer dat het werkt.",
-    "example_perfect": "De kwaliteit is gegarandeerd.", // Passive example
+    "example_perfect": "De kwaliteit is gegarandeerd.",
     "difficulty_level": 4
   },
   {
@@ -2705,15 +2702,15 @@
     "infinitive": "onderbreken",
     "translation": "to interrupt",
     "base_verb": "breken",
-    "prefix": "onder", // Inseparable prefix
+    "prefix": "onder",
     "is_separable": false,
     "is_reflexive": false,
-    "type": "strong", // like 'breken' (brak)
+    "type": "strong",
     "present_stem": "onderbreek",
     "present_singular_3rd": "onderbreekt",
     "simple_past_singular": "onderbrak",
     "simple_past_plural": "onderbraken",
-    "past_participle": "onderbroken", // No extra 'ge-'
+    "past_participle": "onderbroken",
     "auxiliary_verb": "hebben",
     "example_present": "Onderbreek me niet.",
     "example_perfect": "Hij heeft de vergadering onderbroken.",
@@ -2727,7 +2724,7 @@
     "prefix": "op",
     "is_separable": true,
     "is_reflexive": false,
-    "type": "weak", // like 'richten'
+    "type": "weak",
     "present_stem": "richt op",
     "present_singular_3rd": "richt op",
     "simple_past_singular": "richtte op",
@@ -2754,7 +2751,7 @@
     "past_participle": "gepubliceerd",
     "auxiliary_verb": "hebben",
     "example_present": "De krant publiceert het nieuws.",
-    "example_perfect": "Het boek is gepubliceerd.", // Passive example
+    "example_perfect": "Het boek is gepubliceerd.",
     "difficulty_level": 4
   },
   {
@@ -2780,8 +2777,8 @@
     "verb_id": 147,
     "infinitive": "vermoeden",
     "translation": "to suspect / to presume",
-    "base_verb": "moeden", // 'moeden' not used
-    "prefix": "ver", // Inseparable prefix
+    "base_verb": "moeden",
+    "prefix": "ver",
     "is_separable": false,
     "is_reflexive": false,
     "type": "weak",
@@ -2789,7 +2786,7 @@
     "present_singular_3rd": "vermoedt",
     "simple_past_singular": "vermoedde",
     "simple_past_plural": "vermoedden",
-    "past_participle": "vermoed", // No extra 'ge-'
+    "past_participle": "vermoed",
     "auxiliary_verb": "hebben",
     "example_present": "Ik vermoed dat hij liegt.",
     "example_perfect": "Ik heb altijd vermoed dat hij loog.",
@@ -2800,15 +2797,15 @@
     "infinitive": "verwijzen (naar)",
     "translation": "to refer (to)",
     "base_verb": "wijzen",
-    "prefix": "ver", // Inseparable prefix
+    "prefix": "ver",
     "is_separable": false,
     "is_reflexive": false,
-    "type": "strong", // like 'wijzen' (wees)
+    "type": "strong",
     "present_stem": "verwijs",
     "present_singular_3rd": "verwijst",
     "simple_past_singular": "verwees",
     "simple_past_plural": "verwezen",
-    "past_participle": "verwezen", // No extra 'ge-'
+    "past_participle": "verwezen",
     "auxiliary_verb": "hebben",
     "example_present": "Hij verwijst naar het boek.",
     "example_perfect": "Hij heeft naar het boek verwezen.",
@@ -2818,7 +2815,7 @@
     "verb_id": 149,
     "infinitive": "waarderen",
     "translation": "to appreciate / to value",
-    "base_verb": "waarden", // 'waarden' not used as verb
+    "base_verb": "waarden",
     "prefix": null,
     "is_separable": false,
     "is_reflexive": false,
@@ -2830,7 +2827,7 @@
     "past_participle": "gewaardeerd",
     "auxiliary_verb": "hebben",
     "example_present": "Ik waardeer je hulp.",
-    "example_perfect": "Zijn werk wordt zeer gewaardeerd.", // Passive example
+    "example_perfect": "Zijn werk wordt zeer gewaardeerd.",
     "difficulty_level": 4
   },
   {
@@ -2838,21 +2835,20 @@
     "infinitive": "achterhalen",
     "translation": "to find out / to ascertain",
     "base_verb": "halen",
-    "prefix": "achter", // Inseparable prefix
+    "prefix": "achter",
     "is_separable": false,
     "is_reflexive": false,
-    "type": "weak", // like 'halen'
+    "type": "weak",
     "present_stem": "achterhaal",
     "present_singular_3rd": "achterhaalt",
     "simple_past_singular": "achterhaalde",
     "simple_past_plural": "achterhaalden",
-    "past_participle": "achterhaald", // No extra 'ge-'
+    "past_participle": "achterhaald",
     "auxiliary_verb": "hebben",
     "example_present": "We proberen de oorzaak te achterhalen.",
     "example_perfect": "We hebben de oorzaak achterhaald.",
     "difficulty_level": 4
   },
-  
   {
     "verb_id": 151,
     "infinitive": "aanwenden",
@@ -2861,11 +2857,11 @@
     "prefix": "aan",
     "is_separable": true,
     "is_reflexive": false,
-    "type": "weak", // like 'wenden' (wendde)
+    "type": "weak",
     "present_stem": "wend aan",
     "present_singular_3rd": "wendt aan",
-    "simple_past_singular": "wendde aan", // or wendde aan
-    "simple_past_plural": "wendden aan", // or wendden aan
+    "simple_past_singular": "wendde aan",
+    "simple_past_plural": "wendden aan",
     "past_participle": "aangewend",
     "auxiliary_verb": "hebben",
     "example_present": "Hij wendt zijn invloed aan.",
@@ -2877,15 +2873,15 @@
     "infinitive": "betreffen",
     "translation": "to concern / to relate to",
     "base_verb": "treffen",
-    "prefix": "be", // Inseparable prefix
+    "prefix": "be",
     "is_separable": false,
     "is_reflexive": false,
-    "type": "strong / irregular", // like 'treffen' (trof)
+    "type": "strong / irregular",
     "present_stem": "betref",
     "present_singular_3rd": "betreft",
     "simple_past_singular": "betrof",
     "simple_past_plural": "betroffen",
-    "past_participle": "betroffen", // No extra 'ge-'
+    "past_participle": "betroffen",
     "auxiliary_verb": "hebben",
     "example_present": "Dit betreft alleen de directie.",
     "example_perfect": "Het besluit heeft iedereen betroffen.",
@@ -2896,15 +2892,15 @@
     "infinitive": "bedragen",
     "translation": "to amount to",
     "base_verb": "dragen",
-    "prefix": "be", // Inseparable prefix
+    "prefix": "be",
     "is_separable": false,
     "is_reflexive": false,
-    "type": "strong", // like 'dragen' (droeg)
+    "type": "strong",
     "present_stem": "bedraag",
     "present_singular_3rd": "bedraagt",
     "simple_past_singular": "bedroeg",
     "simple_past_plural": "bedroegen",
-    "past_participle": "bedragen", // No extra 'ge-'
+    "past_participle": "bedragen",
     "auxiliary_verb": "hebben",
     "example_present": "De schade bedraagt duizend euro.",
     "example_perfect": "De schade heeft duizend euro bedragen.",
@@ -2914,8 +2910,8 @@
     "verb_id": 154,
     "infinitive": "beogen",
     "translation": "to aim for / to intend",
-    "base_verb": "ogen", // 'ogen' not used as verb
-    "prefix": "be", // Inseparable prefix
+    "base_verb": "ogen",
+    "prefix": "be",
     "is_separable": false,
     "is_reflexive": false,
     "type": "weak",
@@ -2923,7 +2919,7 @@
     "present_singular_3rd": "beoogt",
     "simple_past_singular": "beoogde",
     "simple_past_plural": "beoogden",
-    "past_participle": "beoogd", // No extra 'ge-'
+    "past_participle": "beoogd",
     "auxiliary_verb": "hebben",
     "example_present": "Wat beoogt u met dit voorstel?",
     "example_perfect": "Het plan heeft het beoogde effect gehad.",
@@ -3029,15 +3025,15 @@
     "infinitive": "onderbouwen",
     "translation": "to substantiate / to underpin",
     "base_verb": "bouwen",
-    "prefix": "onder", // Inseparable prefix
+    "prefix": "onder",
     "is_separable": false,
     "is_reflexive": false,
-    "type": "weak", // like 'bouwen'
+    "type": "weak",
     "present_stem": "onderbouw",
     "present_singular_3rd": "onderbouwt",
     "simple_past_singular": "onderbouwde",
     "simple_past_plural": "onderbouwden",
-    "past_participle": "onderbouwd", // No extra 'ge-'
+    "past_participle": "onderbouwd",
     "auxiliary_verb": "hebben",
     "example_present": "U moet uw argumenten goed onderbouwen.",
     "example_perfect": "Hij heeft zijn claim met feiten onderbouwd.",
@@ -3048,15 +3044,15 @@
     "infinitive": "ontlenen (aan)",
     "translation": "to derive (from) / to borrow (from)",
     "base_verb": "lenen",
-    "prefix": "ont", // Inseparable prefix
+    "prefix": "ont",
     "is_separable": false,
     "is_reflexive": false,
-    "type": "weak", // like 'lenen'
+    "type": "weak",
     "present_stem": "ontleen",
     "present_singular_3rd": "ontleent",
     "simple_past_singular": "ontleende",
     "simple_past_plural": "ontleenden",
-    "past_participle": "ontleend", // No extra 'ge-'
+    "past_participle": "ontleend",
     "auxiliary_verb": "hebben",
     "example_present": "Hij ontleent zijn ideeën aan oude filosofen.",
     "example_perfect": "Dit woord is aan het Latijn ontleend.",
@@ -3066,8 +3062,8 @@
     "verb_id": 162,
     "infinitive": "raadplegen",
     "translation": "to consult",
-    "base_verb": null, // 'plegen' exists but different meaning
-    "prefix": "raad", // Often considered inseparable compound
+    "base_verb": null,
+    "prefix": "raad",
     "is_separable": false,
     "is_reflexive": false,
     "type": "weak",
