@@ -6,6 +6,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
+    "is_reflexive": false, // Added
     "type": "irregular / auxiliary",
     "present_stem": null, // Irregular stem
     "present_singular_3rd": "is",
@@ -24,6 +25,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
+    "is_reflexive": false, // Added
     "type": "irregular / auxiliary",
     "present_stem": "heb",
     "present_singular_3rd": "heeft",
@@ -42,6 +44,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
+    "is_reflexive": false, // Added
     "type": "strong / irregular",
     "present_stem": "ga",
     "present_singular_3rd": "gaat",
@@ -60,6 +63,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
+    "is_reflexive": false, // Added
     "type": "modal / irregular",
     "present_stem": null, // Irregular stem
     "present_singular_3rd": "kan",
@@ -68,7 +72,7 @@
     "past_participle": "gekund",
     "auxiliary_verb": "hebben",
     "example_present": "Hij kan zwemmen.",
-    "example_perfect": "Hij heeft kunnen zwemmen.", // Or "Hij heeft gezwommen" is more common
+    "example_perfect": "Hij heeft kunnen zwemmen.",
     "difficulty_level": 0
   },
   {
@@ -78,6 +82,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
+    "is_reflexive": false, // Added
     "type": "modal / irregular",
     "present_stem": "moet",
     "present_singular_3rd": "moet",
@@ -96,6 +101,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
+    "is_reflexive": false, // Added
     "type": "modal / irregular",
     "present_stem": null, // Irregular stem
     "present_singular_3rd": "wil",
@@ -114,11 +120,12 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
-    "type": "weak / irregular past", // Often classified weak, but past is 'zei'/'zeiden'
+    "is_reflexive": false, // Added
+    "type": "weak / irregular past",
     "present_stem": "zeg",
     "present_singular_3rd": "zegt",
-    "simple_past_singular": "zei", // Common form, 'zegde' is rare/formal
-    "simple_past_plural": "zeiden", // Common form, 'zegden' is rare/formal
+    "simple_past_singular": "zei",
+    "simple_past_plural": "zeiden",
     "past_participle": "gezegd",
     "auxiliary_verb": "hebben",
     "example_present": "Wat zegt hij?",
@@ -132,6 +139,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
+    "is_reflexive": false, // Added
     "type": "strong",
     "present_stem": "kom",
     "present_singular_3rd": "komt",
@@ -150,6 +158,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
+    "is_reflexive": false, // Added
     "type": "strong / irregular",
     "present_stem": "doe",
     "present_singular_3rd": "doet",
@@ -168,6 +177,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
+    "is_reflexive": false, // Added
     "type": "weak",
     "present_stem": "maak",
     "present_singular_3rd": "maakt",
@@ -186,7 +196,8 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
-    "type": "irregular", // Often grouped with modals
+    "is_reflexive": false, // Added
+    "type": "irregular",
     "present_stem": "weet",
     "present_singular_3rd": "weet",
     "simple_past_singular": "wist",
@@ -204,6 +215,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
+    "is_reflexive": false, // Added
     "type": "strong / irregular",
     "present_stem": "sta",
     "present_singular_3rd": "staat",
@@ -222,6 +234,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
+    "is_reflexive": false, // Added
     "type": "strong / irregular",
     "present_stem": "zie",
     "present_singular_3rd": "ziet",
@@ -240,7 +253,8 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
-    "type": "strong", // Past tense 'keek' is strong vowel change
+    "is_reflexive": false, // Added
+    "type": "strong",
     "present_stem": "kijk",
     "present_singular_3rd": "kijkt",
     "simple_past_singular": "keek",
@@ -258,6 +272,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
+    "is_reflexive": false, // Added
     "type": "strong",
     "present_stem": "krijg",
     "present_singular_3rd": "krijgt",
@@ -276,6 +291,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
+    "is_reflexive": false, // Added
     "type": "strong",
     "present_stem": "laat",
     "present_singular_3rd": "laat",
@@ -294,7 +310,8 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
-    "type": "strong / irregular", // Past tense 'dacht' is irregular
+    "is_reflexive": false, // Added
+    "type": "strong / irregular",
     "present_stem": "denk",
     "present_singular_3rd": "denkt",
     "simple_past_singular": "dacht",
@@ -312,6 +329,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
+    "is_reflexive": false, // Added
     "type": "strong",
     "present_stem": "vind",
     "present_singular_3rd": "vindt",
@@ -330,6 +348,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
+    "is_reflexive": false, // Added
     "type": "strong",
     "present_stem": "geef",
     "present_singular_3rd": "geeft",
@@ -348,6 +367,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
+    "is_reflexive": false, // Added
     "type": "weak",
     "present_stem": "werk",
     "present_singular_3rd": "werkt",
@@ -366,6 +386,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
+    "is_reflexive": false, // Added
     "type": "strong",
     "present_stem": "neem",
     "present_singular_3rd": "neemt",
@@ -384,6 +405,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
+    "is_reflexive": false, // Added
     "type": "strong",
     "present_stem": "blijf",
     "present_singular_3rd": "blijft",
@@ -402,13 +424,14 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
+    "is_reflexive": false, // Added
     "type": "strong",
     "present_stem": "loop",
     "present_singular_3rd": "loopt",
     "simple_past_singular": "liep",
     "simple_past_plural": "liepen",
     "past_participle": "gelopen",
-    "auxiliary_verb": "hebben / zijn", // Hebben for distance, zijn for direction/change
+    "auxiliary_verb": "hebben / zijn",
     "example_present": "Hij loopt naar school.",
     "example_perfect": "Hij heeft 5 km gelopen. / Hij is naar school gelopen.",
     "difficulty_level": 0
@@ -420,6 +443,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
+    "is_reflexive": false, // Added
     "type": "strong",
     "present_stem": "zit",
     "present_singular_3rd": "zit",
@@ -438,6 +462,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
+    "is_reflexive": false, // Added
     "type": "weak",
     "present_stem": "hoor",
     "present_singular_3rd": "hoort",
@@ -456,10 +481,11 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
-    "type": "strong / irregular", // Past tense 'vroeg' is irregular
+    "is_reflexive": false, // Added
+    "type": "strong / irregular",
     "present_stem": "vraag",
     "present_singular_3rd": "vraagt",
-    "simple_past_singular": "vroeg", // Common form, 'vraagde' is incorrect
+    "simple_past_singular": "vroeg",
     "simple_past_plural": "vroegen",
     "past_participle": "gevraagd",
     "auxiliary_verb": "hebben",
@@ -471,15 +497,16 @@
     "verb_id": 27,
     "infinitive": "gebruiken",
     "translation": "to use",
-    "base_verb": "bruiken", // 'bruiken' is archaic
-    "prefix": "ge", // Inseparable prefix
+    "base_verb": "bruiken",
+    "prefix": "ge",
     "is_separable": false,
+    "is_reflexive": false, // Added
     "type": "weak",
     "present_stem": "gebruik",
     "present_singular_3rd": "gebruikt",
     "simple_past_singular": "gebruikte",
     "simple_past_plural": "gebruikten",
-    "past_participle": "gebruikt", // Note: no extra 'ge-'
+    "past_participle": "gebruikt",
     "auxiliary_verb": "hebben",
     "example_present": "Ik gebruik een pen.",
     "example_perfect": "Ik heb een pen gebruikt.",
@@ -492,7 +519,8 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
-    "type": "strong / irregular", // Past tense 'kocht' is irregular
+    "is_reflexive": false, // Added
+    "type": "strong / irregular",
     "present_stem": "koop",
     "present_singular_3rd": "koopt",
     "simple_past_singular": "kocht",
@@ -510,6 +538,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
+    "is_reflexive": false, // Added
     "type": "strong",
     "present_stem": "lees",
     "present_singular_3rd": "leest",
@@ -528,6 +557,7 @@
     "base_verb": null,
     "prefix": null,
     "is_separable": false,
+    "is_reflexive": false, // Added
     "type": "strong",
     "present_stem": "eet",
     "present_singular_3rd": "eet",
