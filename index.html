@@ -21,7 +21,7 @@
         max-width: 600px;
         width: 95%;
         margin: 10px auto;
-        position: relative; /* Added for flip button positioning */
+        position: relative;
     }
     h1 {
         color: #0056b3;
@@ -31,7 +31,7 @@
     /* --- Card Styles --- */
     .flashcard-scene {
         width: 100%;
-        height: 600px; /* Kept increased height */
+        height: 600px;
         perspective: 1000px;
         margin-bottom: 20px;
     }
@@ -51,23 +51,22 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        -webkit-backface-visibility: hidden;
+        -webkit-backface-visibility: hidden; /* Safari */
         backface-visibility: hidden;
-        /* background-color: #fff; */ /* Defined in specific front/back */
         border-radius: 15px;
         padding: 25px;
         box-sizing: border-box;
-        /* overflow-y: auto; */ /* Removed overflow */
         border: 1px solid #ddd;
         display: flex;
         flex-direction: column;
+        transform: translateZ(0); /* *** ADDED: Force hardware acceleration / potentially fix rendering glitch *** */
     }
     .card-front {
         z-index: 2;
         background-color: #fff; /* Explicit background for front */
     }
     .card-back {
-        transform: rotateY(180deg);
+        transform: rotateY(180deg); /* Keep the initial rotation for the back */
         background-color: #e9f5ff;
         z-index: 1;
         overflow-y: auto; /* Allow scrolling ONLY on back if needed */
@@ -128,8 +127,7 @@
         margin-bottom: 15px;
     }
     .options-container {
-        flex-grow: 1; /* Allow options to take remaining space */
-        /* overflow-y: auto; */ /* Removed overflow from here too */
+        flex-grow: 1;
         margin-top: 10px;
     }
     .options-container label {
@@ -349,16 +347,12 @@
     const backExamplePerfect = document.getElementById("back-example-perfect");
 
 
-    /**
-     * Loads the verb library from the JSON file using fetch.
-     */
+    /** Loads the verb library */
     async function loadVerbLibrary() {
         messageArea.textContent = "Loading verb library...";
         try {
             const response = await fetch('dutchverbslibrary.json');
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             verbLibrary = await response.json();
             console.log(`Successfully loaded ${verbLibrary.length} verbs.`);
             messageArea.textContent = "";
@@ -369,14 +363,12 @@
             tenseSelect.disabled = true;
             flipButton.disabled = true;
             nextButton.disabled = true;
-             cardFront.innerHTML = "<p style='color:red;'>Could not load questions.</p>";
-             cardBack.innerHTML = "<p style='color:red;'>Could not load details.</p>";
+            cardFront.innerHTML = "<p style='color:red;'>Could not load questions.</p>";
+            cardBack.innerHTML = "<p style='color:red;'>Could not load details.</p>";
         }
     }
 
-    /**
-     * Initializes the application state and loads the first question.
-     */
+    /** Initializes the app */
     function initializeApp() {
         levelThresholdEl.textContent = levelThreshold;
         currentDifficultyEl.textContent = currentDifficulty;
@@ -388,16 +380,14 @@
         loadQuestion();
     }
 
-    /**
-     * Loads a new verb question, populates front and back of card, resets flip state and buttons.
-     */
+    /** Loads a new question */
     function loadQuestion() {
         if (isCardFlipped) {
             flashcardContainer.classList.remove('is-flipped');
             isCardFlipped = false;
         }
         flipButton.disabled = false;
-        nextButton.disabled = true; // Disable Next until answer/flip
+        nextButton.disabled = true;
 
         if (currentDifficulty > maxDifficulty) {
             displayCompletionMessage();
@@ -409,35 +399,29 @@
 
         let filteredVerbs = verbLibrary.filter(verb => verb.difficulty_level === currentDifficulty);
 
-        // --- FIX: Handle empty level ---
         if (filteredVerbs.length === 0) {
              console.warn(`No verbs found for difficulty level ${currentDifficulty}.`);
              if (currentDifficulty >= maxDifficulty) {
-                 displayCompletionMessage(); // Already at max, finish
+                 displayCompletionMessage();
              } else {
-                 // Inform user and enable Next to skip to the *next* level attempt
                  messageArea.textContent = `No verbs found for level ${currentDifficulty}. Click Next to try level ${currentDifficulty + 1}.`;
-                 feedbackEl.textContent = ""; // Clear previous feedback
-                 // Disable interaction with current (empty) card state
+                 feedbackEl.textContent = "";
                  optionsContainer.innerHTML = "";
                  verbInfinitiveEl.textContent = "-";
                  englishMeaningEl.textContent = "-";
                  verbDifficultyEl.textContent = "-";
                  verbInfoEl.textContent = "";
                  flipButton.disabled = true;
-                 tenseSelect.disabled = true; // Prevent changing tense on empty level message
-                 // Prepare for next level
-                 currentDifficulty++;
-                 correctInLevel = 0;
+                 tenseSelect.disabled = true;
+                 currentDifficulty++; // Prepare for next level attempt
+                 correctInLevel = 0; // Reset progress
                  nextButton.disabled = false; // Enable Next to proceed
              }
-             return; // Stop processing this call
+             return;
         }
-        // --- End FIX ---
 
-        // Clear potential message from empty level skip
-        messageArea.textContent = "";
-        tenseSelect.disabled = false; // Re-enable tense select
+        messageArea.textContent = ""; // Clear message if level has verbs
+        tenseSelect.disabled = false;
 
         currentVerb = filteredVerbs[Math.floor(Math.random() * filteredVerbs.length)];
         currentTenseField = tenseSelect.value;
@@ -470,7 +454,6 @@
         const numOptions = 5;
         let attempts = 0;
         const maxAttempts = filteredVerbs.length * 2 + 10;
-
         while (options.size < numOptions && attempts < maxAttempts) {
             const randomVerb = filteredVerbs[Math.floor(Math.random() * filteredVerbs.length)];
             const randomOption = randomVerb[currentTenseField];
@@ -491,7 +474,7 @@
             radio.type = "radio";
             radio.name = "verb-option";
             radio.value = option;
-            radio.disabled = false; // Ensure options are enabled
+            radio.disabled = false;
             const safeOptionId = String(option).replace(/[^a-zA-Z0-9-_]/g, '') || `opt-${Math.random().toString(36).substr(2, 9)}`;
             radio.id = `option-${safeOptionId}`;
             radio.addEventListener("change", handleAnswerSelection);
@@ -553,56 +536,4 @@
                 }
             } else {
                 feedbackEl.textContent = `Incorrect. The correct answer is: ${correctOptionValue}`;
-                feedbackEl.className = "incorrect";
-            }
-
-            if (proceedToNext) nextButton.disabled = false; // Enable Next button
-        }
-    }
-
-     /** Handles the flip button click */
-     function handleFlip() {
-         const wasFlipped = isCardFlipped;
-         isCardFlipped = !isCardFlipped;
-         flashcardContainer.classList.toggle('is-flipped');
-
-         if (!wasFlipped) { // Flipping front-to-back (skip)
-             console.log("Flipped to back / Skipped");
-             feedbackEl.textContent = `Skipped. Correct answer for ${currentTenseField}: ${correctOptionValue}`;
-             feedbackEl.className = "incorrect";
-             document.querySelectorAll('input[name="verb-option"]').forEach(radio => radio.disabled = true);
-             flipButton.disabled = true;
-             if (currentDifficulty <= maxDifficulty) nextButton.disabled = false; // Enable Next
-         } else { // Flipping back-to-front
-             console.log("Flipped back to front");
-             // Keep flip disabled, user must press Next now
-         }
-     }
-
-    /** Displays the completion message */
-     function displayCompletionMessage() {
-         flashcardContainer.innerHTML = "<div class='card-face card-front' style='display:flex; align-items:center; justify-content:center; text-align:center;'><h2>Congratulations! You have completed all available difficulty levels.</h2></div>";
-         tenseSelect.disabled = true;
-         flipButton.disabled = true;
-         nextButton.disabled = true;
-         feedbackEl.textContent = "Finished!";
-         feedbackEl.className = "correct";
-     }
-
-    // --- Event Listeners ---
-    tenseSelect.addEventListener("change", () => {
-        if (verbLibrary.length > 0 && currentDifficulty <= maxDifficulty) loadQuestion();
-    });
-    flipButton.addEventListener("click", handleFlip);
-    nextButton.addEventListener("click", () => {
-        if (currentDifficulty <= maxDifficulty) {
-            nextButton.disabled = true; // Disable immediately
-            loadQuestion();
-        }
-    });
-    document.addEventListener("DOMContentLoaded", loadVerbLibrary);
-
-</script>
-
-</body>
-</html>
+                feedb
